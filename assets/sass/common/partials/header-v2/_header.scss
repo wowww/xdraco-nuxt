@@ -1,0 +1,98 @@
+@import '~@/assets/sass/mixin';
+@import './header-custom-props';
+
+.header {
+  .is-desktop & {
+    visibility: visible;
+    position: fixed;
+    z-index: var(--header-zindex);
+    width: 100%;
+    box-shadow: none !important;
+    transition: height 400ms ease, margin-top 400ms ease, backdrop-filter 600ms ease-out, background-color 600ms ease-out;
+
+    .header__inner {
+      display: flex;
+      justify-content: space-between;
+      height: var(--header-height);
+      background-color: var(--header-bgcolor);
+    }
+
+    .header__left,
+    .header__right {
+      display: flex;
+      height: 100%;
+    }
+
+    .header__right {
+      column-gap: 1px;
+    }
+
+    .btn-open-list {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: var(--header-height);
+      height: 100%;
+      font-size: 0;
+      color: #fff;
+      background-color: rgba(#fff, .2);
+    }
+
+    &.headroom--unpinned {
+      margin-top: calc(-1 * var(--header-height)) !important;
+    }
+
+    &.headroom--not-top {
+      .subnav {
+        --navdsp-height: 60px;
+
+        background-color: rgba(#161630, .6) !important;
+        backdrop-filter: blur(5px);
+
+        &.dsp {
+          .logo {
+            height: 36px;
+          }
+        }
+
+        &.exchange {
+          .logo {
+            height: 20px;
+          }
+        }
+      }
+    }
+
+    &.v-app-bar--is-scrolled {
+      --header-height: 44px;
+      --header-btn-height: 44px;
+
+      .gnb__bi {
+        min-width: 128px;
+
+        .link::before {
+          transform: scale(.72);
+        }
+      }
+
+      .gnb__list {
+        .v-list-item {
+          min-width: auto;
+
+          &::before {
+            opacity: 0;
+          }
+
+          &[target=_blank]::after {
+            margin-left: -2px;
+            transform: scale(.8);
+          }
+
+          .text {
+            transform: scale(.8);
+          }
+        }
+      }
+    }
+  }
+}

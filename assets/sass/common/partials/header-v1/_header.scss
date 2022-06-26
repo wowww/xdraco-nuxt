@@ -1,0 +1,457 @@
+@import '~@/assets/sass/mixin';
+@import './header-custom-props';
+
+.header {
+  visibility: visible;
+  background-color: var(--header-bgcolor) !important;
+  box-shadow: none !important;
+}
+
+.is-desktop {
+  .header {
+    position: fixed;
+    background-color: transparent !important;
+
+    &.v-toolbar {
+      transition: height 400ms ease, margin-top 400ms ease, backdrop-filter 600ms ease-out, background-color 600ms ease-out;
+
+      .v-toolbar__content {
+        height: inherit !important;
+      }
+    }
+    .v-toolbar__content {
+      display: block;
+      padding: 0;
+    }
+    .menu-profile {
+      top: 0 !important;
+      left: auto !important;
+      right: 24px;
+      border-radius: 0;
+      transform: translateY(calc(var(--header-height) + 8px));
+      transition: transform 400ms ease;
+    }
+    .btn-header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: visible;
+      padding: 0 8px;
+      min-width: auto;
+      min-width: var(--header-btn-width);
+      height: var(--header-btn-height);
+      box-sizing: border-box;
+
+      &.btn-text {
+        flex: none;
+        column-gap: 6px;
+        min-width: auto;
+        font-size: 14px;
+        font-weight: 700;
+
+        &[target="_blank"] {
+          &::after {
+            content: "";
+            display: block;
+            width: 9px;
+            height: 9px;
+            background: url("~@/assets/img/desktop/header-v1/icon-arrow.png") 50% 50% / contain no-repeat;
+          }
+        }
+      }
+      &.download {
+        margin-right: 24px;
+        width: auto;
+        font-size: 16px;
+        font-weight: 700;
+        white-space: nowrap;
+
+        &::after {
+          content: "";
+          display: block;
+          margin-left: 6px;
+          width: 20px;
+          height: 20px;
+          background: url("~@/assets/img/desktop/header-v1/icon-download.webp") 50% 50% / cover no-repeat;
+        }
+      }
+      &.discord {
+        line-height: 0;
+        font-size: 0;
+
+        &::before {
+          content: "";
+          display: block;
+          width: 24px;
+          height: 20px;
+          background: url("~@/assets/img/desktop/header-v1/icon-discord.webp") 0 50% / contain no-repeat;
+        }
+      }
+      &.language {
+        &::before {
+          content: '';
+          display: block;
+          width: 24px;
+          height: 24px;
+          background: url("~@/assets/img/desktop/header-v1/icon-language.webp") 50% 50% / cover no-repeat;
+        }
+      }
+      &.account {
+        position: relative;
+        font-size: 0;
+
+        &::after {
+          content: '';
+          display: block;
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          background: rgba(#fff, .3) url("~@/assets/img/desktop/header-v1/icon-profile.webp") 50% 50% / 24px 24px no-repeat;
+        }
+        > img {
+          position: absolute;
+          top: calc(50% - 16px);
+          left: calc(50% - 16px);
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+        }
+        &[data-get-activity="true"] {
+          @include iconActivity($top: 5px, $right: 5px);
+          &::after {
+            background-image: none;
+          }
+        }
+      }
+    }
+
+    &.v-app-bar--is-scrolled {
+      --header-height: 44px;
+      --header-btn-height: 44px;
+
+      .gnb__bi {
+        min-width: 128px;
+
+        .link::before {
+          transform: scale(.72);
+        }
+      }
+      .gnb__list {
+        .v-list-item {
+          min-width: auto;
+
+          &::before {
+            opacity: 0;
+          }
+          &[target=_blank]::after {
+            margin-left: -2px;
+            transform: scale(.8);
+          }
+          .text {
+            transform: scale(.8);
+          }
+        }
+      }
+
+      &.headroom--unpinned {
+        margin-top: calc(-1 * var(--header-height)) !important;
+      }
+      &.headroom--not-top {
+        background-color: rgba(#161630, .6) !important;
+        backdrop-filter: blur(5px);
+
+        .subnav {
+          --navdsp-height: 60px;
+
+          &.dsp {
+            .logo {
+              height: 36px;
+            }
+          }
+          &.exchange {
+            .logo {
+              height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .header {
+    .header__top {
+      display: flex;
+      justify-content: space-between;
+      padding-right: 2px;
+      padding-left: 8px;
+      height: var(--header-height);
+      background-color: var(--header-bgcolor);
+    }
+    &.v-toolbar {
+      transition: height 400ms ease, margin-top 400ms ease, transform 400ms ease, backdrop-filter 400ms ease-out, background-color 400ms ease-out;
+
+      .v-toolbar__content {
+        display: block;
+        padding: 0;
+      }
+      .left {
+        display: flex;
+        align-items: center;
+      }
+      .right {
+        display: flex;
+        align-items: center;
+      }
+      .bi {
+        visibility: visible;
+        margin-left: 10px;
+        width: 92px;
+        height: 24px;
+        font-size: 0;
+        vertical-align: top;
+        background: url("~@/assets/img/mobile/header/bi-draco-gnb.webp") 50% 100% / 92px 24px no-repeat;
+      }
+      .header-bi {
+        visibility: visible;
+        margin-left: 8px;
+        width: 92px;
+        height: 20px;
+        line-height: 0;
+        font-size: 0;
+        background-position: 0 0;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+
+        &.home {
+          background-image: url("~@/assets/img/mobile/header/bi-header-xdraco.webp");
+        }
+
+        &.exchange {
+          width: 92px;
+          height: 38px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-exd.webp");
+        }
+        &.dsp {
+          width: 70px;
+          height: 28px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-dsp.webp");
+        }
+        &.mir4nft {
+          width: 71px;
+          height: 30px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-mir4nft.webp");
+        }
+        &.draco {
+          width: 108px;
+          height: 28px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-draco.webp");
+        }
+        &.exd {
+          width: 92px;
+          height: 38px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-exd.webp");
+        }
+        &.collectible {
+          width: 159px;
+          height: 30px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-collectibles.webp");
+        }
+        &.hsp {
+          width: 76px;
+          height: 28px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-hsp.webp");
+        }
+        &.mirage {
+          width: 120px;
+          height: 32px;
+          background-image: url("~@/assets/img/mobile/header/nav-mirage.webp");
+        }
+        &.inventory {
+          width: 107px;
+          height: 32px;
+          background-image: url("~@/assets/img/mobile/header/bi-header-inventory.webp");
+        }
+      }
+      .btn-header {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        visibility: visible;
+        width: 48px;
+        height: 48px;
+
+        &.download {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          width: 48px;
+          font-size: 0;
+
+          &::after {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url("~@/assets/img/mobile/header/icon-download.webp") 0 0 / cover no-repeat;
+          }
+        }
+        &.discord {
+          width: 48px;
+          line-height: 0;
+          font-size: 0;
+
+          &::before {
+            content: '';
+            display: block;
+            width: 24px;
+            height: 24px;
+            background: url("~@/assets/img/mobile/header/icon-discord.webp") 0 0 / cover no-repeat;
+          }
+        }
+        &.account {
+          position: relative;
+          font-size: 0;
+
+          &::before {
+            content: '';
+            display: block;
+            border-radius: 50%;
+            margin: 0 auto;
+            width: 32px;
+            height: 32px;
+            background: rgba(#fff, .3) url("~@/assets/img/mobile/header/icon-profile.webp") 50% 50% / 24px 24px no-repeat;
+          }
+          > img {
+            position: absolute;
+            top: calc(50% - 16px);
+            left: calc(50% - 16px);
+            border-radius: 50%;
+            width: 32px;
+            height: 32px;
+          }
+          &[data-get-activity="true"] {
+            @include iconActivity($top: 5px, $right: 5px);
+            &::after {
+              background-image: none;
+            }
+          }
+        }
+      }
+    }
+    .btn-gnb-menu,
+    .btn-gnb-language {
+      .v-btn__content {
+        width: 48px;
+        height: 48px;
+      }
+    }
+    .btn-gnb-menu .v-btn__content {
+      &::before {
+        content: '';
+        display: block;
+        width: 24px;
+        height: 24px;
+        background: url("~@/assets/img/mobile/header/icon-gnb.webp") 50% 50% / cover no-repeat;
+      }
+    }
+    .btn-gnb-language .v-btn__content {
+      background: url("~@/assets/img/mobile/header/icon-language.webp") 50% 50% / 24px 24px no-repeat;
+    }
+
+    &.headroom--unpinned {
+      transform: translateY( calc(-1 * var(--header-height)) ) !important;
+    }
+    &.headroom--not-top {
+      background-color: rgba(#161630, .6) !important;
+      backdrop-filter: blur(5px);
+
+      &.theme-light {
+        backdrop-filter: blur(8px);
+      }
+    }
+    &.theme-light {
+      background-color: transparent !important;
+    }
+    .show-notification-global & {
+      &.headroom--unpinned {
+        &:not(.headroom--not-top) {
+          transform: translateY( calc(-1 * (var(--header-height) + var(--notification-global-height))) ) !important;
+        }
+      }
+    }
+
+    .btn-login {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      visibility: visible;
+      position: relative;
+      padding: 0 8px;
+      min-width: 44px;
+      height: 48px;
+      font-size: 12px;
+      color: #fff;
+      box-sizing: border-box;
+      transition: background-color 400ms ease;
+
+      .text {
+        margin-right: 8px;
+      }
+      .thumbs {
+        border-radius: 50%;
+        width: 32px;
+        height: 32px;
+        background: rgba(#fff, .3) url("~@/assets/img/desktop/header-v2/icon-profile.webp") 50% 50% / 24px 24px no-repeat;
+
+        > img {
+          border-radius: inherit;
+        }
+      }
+      &::after {
+        content: '';
+        display: none;
+        border-radius: 50%;
+        width: 6px;
+        height: 6px;
+      }
+      &[aria-expanded="true"] {
+        background-color: rgba(#fff, .2);
+      }
+      &[data-get-activity="true"] {
+        .thumbs {
+          @include iconActivity();
+        }
+      }
+      &[data-has-represent="false"] {
+        cursor: default;
+
+        .thumbs {
+          > img {
+            border-radius: 0;
+          }
+        }
+        &[aria-expanded="true"] {
+          background-color: transparent
+        }
+      }
+    }
+  }
+  .v-navigation-drawer {
+    width: 100% !important;
+    max-width: 440px !important;
+    height: 100% !important;
+    background-color: var(--header-bgcolor) !important;
+
+    .v-navigation-drawer__content {
+      position: relative;
+    }
+    .btn-close {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      z-index: 10;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "qr.title.prefix": "",
+  "qr.title.suffix": "연결",
+  "qr.remain": "남은시간",
+  "qr.text1":"위믹스 지갑을 통해 QR 코드를 스캔해주세요.",
+  "qr.step1":"위믹스 지갑 실행",
+  "qr.step2":"상단 아이콘 클릭",
+  "qr.step3":"스캔 후 인증",
+  "qr.other1":"기타 QR 코드 리더기로 스캔이 가능합니다.",
+  "qr.remain.format":"{mm}분 {ss}초",
+  "qr.expired":"만료되었습니다.",
+
+  "qr.text2":"위믹스 지갑을 통해 인증이 진행됩니다.",
+  "qr.step1.mobile":"위믹스 지갑 자동 실행",
+  "qr.step2.mobile":"위믹스 지갑 인증 완료",
+  "qr.step3.mobile":"인증 후 페이지 확인",
+  "qr.allow.popup.mobile" :"WEMIX Wallet 실행이 되지 않을 경우 팝업차단을 해제해 주세요."
+}

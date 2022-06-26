@@ -1,0 +1,234 @@
+.wrap-summary-coin {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 2px;
+
+  > div,
+  .wrap-child {
+    flex: 1;
+
+    .summary-coin {
+      flex-direction: column;
+    }
+  }
+}
+
+.summary-coin {
+  margin: 0;
+  padding: 0;
+  background-color: #000044;
+
+  .summary-coin__inner,
+  .title-currency {
+    width: 420px;
+  }
+  .summary-coin__inner {
+    min-height: 355px;
+  }
+  .title-currency {
+    display: flex;
+    margin-top: 64px;
+    border-bottom: 1px solid rgba(#fff, .5);
+    padding-bottom: 16px;
+    height: 24px;
+    box-sizing: content-box;
+  }
+  .updated-date {
+    margin-top: 13px;
+    line-height: 1.5;
+    font-size: 12px;
+    color: rgba(#fff, .5);
+    letter-spacing: -0.01em;
+    text-align: center;
+
+    em {
+      font-style: normal;
+      color: rgba(#fff, .75);
+    }
+  }
+  .display-price {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 160px;
+
+    dt {
+      min-height: 40px;
+      line-height: 1.5;
+      font-size: 16px;
+
+      .sub-title {
+        margin: 0;
+        line-height: 1.333;
+        font-size: 12px;
+        opacity: .5;
+      }
+    }
+    dd {
+      margin-top: 8px;
+      margin-bottom: 0;
+    }
+    .amount {
+      align-items: center;
+      line-height: 1.4;
+      font-size: 40px;
+      letter-spacing: -0.4px;
+    }
+    .change {
+      margin-left: 16px;
+      padding: 0 8px;
+      height: 36px;
+      line-height: 1.6;
+      font-size: 20px;
+    }
+    .sup {
+      top: -0.8em;
+    }
+    .wrap-refining-hydra {
+      display: flex;
+      column-gap: 16px;
+
+      .amount {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        line-height: 1.2;
+        font-size: 40px;
+        transition: all 200ms 0.3s ease-in;
+
+        &::before {
+          content: "";
+          display: block;
+          margin-right: 8px;
+          width: 40px;
+          height: 40px;
+          background-position: 50% 0;
+          background-size: auto 100%;
+          background-repeat: no-repeat;
+        }
+        .sup {
+          top: -1.5em;
+          margin-left: 8px;
+          line-height: 1;
+          font-weight: 400;
+          font-size: 12px;
+        }
+        &.draco {
+          &::before {
+            background-image: url("~@/assets/img/desktop/symbol-draco.webp");
+          }
+        }
+        &.septaria {
+          &::before {
+            margin-right: 4px;
+            width: 34px;
+            background-image: url("~@/assets/img/desktop/hydra/icon-coin-septarium.webp");
+          }
+        }
+      }
+      .symbol-plus {
+        line-height: 56px;
+        font-size: 48px;
+        font-weight: 100;
+      }
+    }
+  }
+  .display-data {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid rgba(#c4c4c4, .2);
+    border-width: 1px 0;
+    height: 56px;
+    box-sizing: content-box;
+
+    dt, dd {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    dt {
+      row-gap: 2px;
+      line-height: 16px;
+      font-size: 14px;
+      color: rgba(#fff, .75);
+
+      > span {
+        &:only-child {
+          font-size: 12px;
+        }
+      }
+    }
+    dd {
+      font-weight: 700;
+      color: #fff;
+    }
+    .date {
+      margin-top: 0;
+      height: 100%;
+      font-size: 10px;
+      color: rgba(#fff, .5);
+      text-align: left;
+    }
+    .v-carousel {
+      &__item {
+        color: currentColor;
+      }
+    }
+    & + .display-data {
+      border-top-width: 0;
+    }
+  }
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  .is-mobile & {
+    padding: 40px 0;
+
+    .summary-coin__inner {
+      width: 100%;
+    }
+    .title-currency {
+      margin-top: 0;
+      width: 100%;
+    }
+    .display-price {
+      margin: 0;
+      min-height: 152px;
+
+      .amount {
+        font-size: 32px;
+
+        &::before {
+          width: 32px;
+          height: 32px;
+        }
+        .sup {
+          top: -1em;
+        }
+      }
+      .wrap-refining-hydra {
+        .amount {
+          &::before {
+            width: 32px;
+            height: 32px;
+          }
+          &.septaria {
+            &::before {
+              width: 26px;
+            }
+          }
+        }
+        .symbol-plus {
+          line-height: 48px;
+          font-size: 32px;
+        }
+      }
+    }
+    & + .summary-coin {
+      padding-top: 0;
+    }
+  }
+}

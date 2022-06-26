@@ -1,0 +1,208 @@
+.mirage-boss-raid {
+  background-color: #111133;
+  margin-top: 32px;
+  padding: 0 24px 24px;
+  line-height: normal;
+
+  &__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 60px;
+    padding: 26px 0;
+
+    .section-tit {
+      font-size: 24px;
+      line-height: normal;
+      color: #fff;
+    }
+    .txt-notice {
+      font-size: 14px;
+
+      > em {
+        color: #fff;
+      }
+    }
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+
+    .wrap-boss {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(50% - 1px);
+      padding: 24px;
+      height: 400px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: #fff;
+
+      &.eunsil, &.raid-type-11,
+      &[data-boss-name='eunsil'], &[data-raid-type='11'] {
+        background-image: url('~@/assets/img/desktop/mirage/bg-boss-raid-eunsil.webp');
+      }
+      &.horang, &.raid-type-12,
+      &[data-boss-name='horang'], &[data-raid-type='12'] {
+        background-image: url('~@/assets/img/desktop/mirage/bg-boss-raid-horang.webp');
+      }
+    }
+    .boss-header {
+      display: flex;
+      justify-content: space-between;
+      column-gap: 20px;
+    }
+    .info-boss {
+      flex: 1;
+      font-size: 26px;
+      line-height: 1.08;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+
+      > em {
+        display: block;
+        color: #f00;
+      }
+    }
+    .info-round {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      row-gap: 2px;
+      width: 58px;
+      height: 58px;
+      border: 1px solid #fff;
+      font-size: 12px;
+      line-height: 1.33;
+
+      .round-num {
+        font-size: 20px;
+        line-height: 1;
+        font-weight: 600;
+      }
+    }
+    .box-toast {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      row-gap: 4px;
+      min-height: 80px;
+      padding: 21px 24px;
+      background-image: linear-gradient(to bottom, #111 0%, #222 100%);
+      text-align: center;
+
+      .toast-date {
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.6);
+      }
+      .toast-msg {
+        font-size: 16px;
+      }
+    }
+    .info-entry {
+      display: flex;
+      flex-direction: column;
+    }
+    .info-time {
+      display: flex;
+      background-color: #000;
+
+
+      .info-time-msg {
+        display: flex;
+        align-items: center;
+        flex: 1;
+        padding: 8px 12px;
+        background-image: linear-gradient(to bottom, #5d017c 0%, #46015d 100%);
+        font-size: 14px;
+      }
+      .tick-mirage {
+        margin-right: -1px;
+      }
+      .icon-locked {
+        width: 32px;
+        height: 32px;
+        margin-left: 1px;
+        background: url('~@/assets/img/common/mirage/ico-locked-dark.webp') 0 0 / cover no-repeat;
+        font-size: 0;
+      }
+
+      &.is--locked {
+        .info-time-msg {
+          background-image: linear-gradient(to bottom, #444 0%, #222 100%);
+        }
+      }
+    }
+  }
+
+  .is-mobile & {
+    margin: 40px auto 0;
+    padding: 0;
+    max-width: 640px;
+    background-color: transparent;
+
+    &__header {
+      align-items: flex-start;
+      flex-direction: column;
+      padding: 16px;
+      row-gap: 8px;
+
+      .section-tit {
+        font-size: 20px;
+      }
+    }
+    &__body {
+      flex-direction: column;
+      gap: 0;
+
+      .wrap-boss {
+        position: relative;
+        width: auto;
+        height: 0;
+        padding: 96% 0 0 0;
+
+        .boss-header {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          right: 16px;
+        }
+        .boss-bottom {
+          position: absolute;
+          bottom: 16px;
+          left: 16px;
+          right: 16px;
+        }
+
+        &.eunsil,
+        &[data-boss-name='eunsil'] {
+          background-image: url('~@/assets/img/mobile/mirage/bg-boss-raid-eunsil.webp');
+        }
+        &.horang,
+        &[data-boss-name='horang'] {
+          background-image: url('~@/assets/img/mobile/mirage/bg-boss-raid-horang.webp');
+        }
+
+        .info-entry {
+          .btn-bid {
+            max-width: none;
+          }
+        }
+      }
+      .info-time {
+        .info-time-msg {
+          font-size: 12px;
+        }
+      }
+      .tick-mirage {
+        --tick-width: 24px;
+        --tick-fontsize: 20px;
+      }
+    }
+  }
+}

@@ -1,0 +1,113 @@
+// 서비스 되지 않으며 작업자를 위한 class입니다.
+
+.linktitle {
+  margin: 40px 0 10px;
+  line-height: 1;
+  font-size: 40px;
+  color: #fff;
+  opacity: 1;
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+  &.smaller {
+    margin-top: 24px;
+    margin-bottom: 6px;
+    font-size: 20px;
+    font-weight: 500;
+  }
+}
+.ui-wrap-button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  .btn {
+    margin-top: 10px;
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+
+.popup-rounds-sample {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 8px;
+  background-color: rgba(#fff, 0.1);
+}
+.popup-rounds-sample .round-number {
+  margin-left: auto;
+}
+
+.link-popup {
+  display: block;
+  padding: 3px 0;
+  font-size: 12px;
+  color: rgba(#fff, .7);
+}
+
+.is-desktop {
+  .linktitle {
+    margin: 60px 0 10px;
+  }
+
+  .popup-rounds-sample {
+    width: 560px;
+  }
+
+  .side-sticky-button {
+    --btn-height: 30px;
+
+    position: sticky;
+    top: 300px;
+    left: 0;
+    z-index: 1000;
+    margin-bottom: calc(-1 * var(--btn-height));
+    width: 50px;
+    transform: translateX(-50px);
+
+    .button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+      width: 100%;
+      height: var(--btn-height);
+      font-size: 12px;
+      color: #fff;
+      background-color: rgba(#fff, .2);
+
+      &.btn-locked {
+        font-size: 0;
+        background-color: rgba(#600a24, 0.4);
+
+        &::before {
+          content: '';
+          display: block;
+          width: 20px;
+          height: 20px;
+          background: url('~@/assets/img/common/mirage-character/ico-locked.webp') 0 0 / contain no-repeat;
+          opacity: 0.5;
+        }
+        &.btn--active {
+          background-color: #600a24;
+
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+      &.btn--active {
+        background-color: #600a24;
+
+        &::before {
+          opacity: 1;
+        }
+      }
+    }
+  }
+}

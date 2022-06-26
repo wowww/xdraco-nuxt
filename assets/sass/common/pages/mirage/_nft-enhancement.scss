@@ -1,0 +1,148 @@
+.contents.mirage {
+  .nft-enhancement {
+    .group-seal {
+      display: flex;
+      gap: 2px;
+
+      .seal-item {
+        display: flex;
+        flex: 1;
+        padding: 24px;
+        background-image: linear-gradient(to right, #113 0%, #224 48%, #113 100%, #112 100%);
+
+        .inner-item {
+          display: flex;
+          align-items: center;
+        }
+        .thumb-item {
+          position: relative;
+          width: 64px;
+          height: 64px;
+
+          img {
+            max-width: 100%;
+          }
+          .item-amount {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            padding: 4px 6px;
+            background-color: #00000033;
+            font-size: 12px;
+            line-height: 1.33;
+            text-align: center;
+            color: #ffec44;
+          }
+        }
+        .item-desc {
+          flex: 1;
+          font-size: 14px;
+          color: #fff;
+          line-height: 1.29;
+        }
+      }
+    }
+    .section-teasing {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 40px 0 120px;
+      padding-top: 503px;
+      background: url('~@/assets/img/desktop/mirage/bg-enhancement.webp') 50% 0 / 896px 503px no-repeat;
+      text-align: center;
+
+      .teasing-ment {
+        font-size: 20px;
+        line-height: 1.2;
+      }
+      .teasing-ment-sub {
+        font-size: 14px;
+        line-height: 1.71;
+        color: #ffffff99;
+      }
+    }
+  }
+}
+
+.is-desktop {
+  .contents.mirage {
+    .nft-enhancement {
+      .util-list {
+        justify-content: flex-end;
+        margin: 30px 0;
+      }
+      .group-seal {
+        flex-wrap: wrap;
+
+        .seal-item {
+          column-gap: 16px;
+          align-items: center;
+          flex: 1 1 49%;
+          padding: 16px 24px;
+
+          .inner-item {
+            flex: 1;
+            column-gap: 16px;
+          }
+
+          .item-desc {
+            line-height: 1.71;
+          }
+        }
+        .wrap-btn {
+          width: 80px;
+
+          .btn-mirage {
+            min-width: auto;
+          }
+        }
+      }
+      .section-teasing {
+        margin: 72px 0 120px;
+        padding-top: 503px;
+        background: url('~@/assets/img/desktop/mirage/bg-enhancement.webp') 50% 0 / 896px 503px no-repeat;
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .section__inner {
+    --section-padding-x: 0 !important;
+    padding: 0;
+  }
+
+  .contents.mirage {
+    .nft-enhancement {
+      .util-list {
+        .mirage-inventory {
+          justify-content: flex-end;
+        }
+      }
+      .section-enhancment {
+        margin: 40px calc(-1 * var(--intro-draco-padding)) 0;
+        width: calc(100% + (var(--intro-draco-padding) * 2));
+      }
+      .group-seal {
+        .seal-item {
+          flex-direction: column;
+          justify-content: space-between;
+          row-gap: 16px;
+          text-align: center;
+
+          .inner-item {
+            flex-direction: column;
+            row-gap: 16px;
+          }
+        }
+        .wrap-btn {
+          .btn-mirage {
+            height: auto;
+            min-height: 32px;
+          }
+        }
+      }
+    }
+  }
+}
+

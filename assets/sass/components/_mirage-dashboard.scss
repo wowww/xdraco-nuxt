@@ -1,0 +1,147 @@
+.mirage-dashboard {
+  margin-bottom: 32px;
+	color: #fff;
+  line-height: normal;
+
+  .dashboard-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 16px;
+
+    .dashboard-title {
+      font-size: 20px;
+    }
+  }
+
+  .list-dashboard {
+    display: flex;
+    gap: 1px;
+    flex-wrap: wrap;
+
+    > div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      position: relative;
+      row-gap: 4px;
+      padding: 16px;
+      background-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+      flex: 1;
+
+      dt {
+        font-size: 12px;
+        line-height: 1.67;
+        color: #ffffff99;
+      }
+
+      dd {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+      }
+    }
+
+    .dashboard-link {
+      > a {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        font-size: 0;
+      }
+
+      dd {
+        position: relative;
+        padding-right: 20px;
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: calc(50% - 8px);
+          right: 0;
+          width: 16px;
+          height: 16px;
+          background: url('~@/assets/img/common/mirage/ico-arrow-sm.webp') 0 0 / cover no-repeat;
+        }
+      }
+    }
+  }
+
+  .value {
+    display: flex;
+    align-items: center;
+    column-gap: 4px;
+    font-size: 16px;
+    line-height: 1.5;
+
+    &.text-gray {
+      color: rgba(255, 255, 255, 0.5);
+    }
+  }
+
+  .is-mobile & {
+    position: relative;
+    width: 100%;
+    margin-bottom: 40px;
+
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 16px;
+
+      .dashboard-title {
+        flex: 1;
+        min-width: 220px;
+      }
+    }
+    .resource-vigor {
+      display: flex;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      word-break: break-all;
+    }
+
+    .list-dashboard {
+      flex-wrap: wrap;
+
+      > div {
+        flex-basis: 49%;
+        row-gap: 8px;
+
+        dt {
+          text-align: center;
+          color: #fff;
+          line-height: normal;
+        }
+
+        dd {
+          word-break: break-all;
+        }
+      }
+    }
+
+    .value {
+      + .btn {
+        margin-left: 0;
+      }
+
+      &.vigor {
+        display: flex;
+        align-items: center;
+        column-gap: 4px;
+
+        &::before {
+          content: '';
+          width: 20px;
+          height: 20px;
+          background: url('~@/assets/img/common/mirage/ico-20-energy.webp') 0 0 / 100% auto no-repeat;
+        }
+      }
+    }
+  }
+}

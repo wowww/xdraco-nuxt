@@ -1,0 +1,464 @@
+.mirage-hidden-valley-capture {
+  position: relative;
+  min-height: 300px;
+  background: #121133 url('~@/assets/img/common/mirage/bg-valley.webp') 50% 0 / auto 480px no-repeat;
+  line-height: normal;
+  color: #fff;
+
+  .valley-header,
+  .valley-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .valley-header {
+    padding: 24px;
+
+    .valley-title {
+      font-size: 24px;
+      background-image: linear-gradient(to bottom, #f00 0%, #f40 100%);
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .valley-notice {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+    padding: 2px 24px;
+
+    &__icon {
+      margin-right: 16px;
+      width: 40px;
+      height: 40px;
+      max-width: 100%;
+    }
+    &__desc {
+      flex: 1;
+      padding-right: 10px;
+      color: #fff;
+      font-size: 14px;
+      line-height: 1.43;
+    }
+    &__date {
+     font-size: 12px;
+     line-height: 1.5;
+     color: rgba(255, 255, 255, 0.6);
+    }
+  }
+
+  .valley-content {
+    display: grid;
+    grid-gap: 2px;
+    grid-template-columns: repeat(4, 1fr);
+    margin: 0 23px;
+    padding-bottom: 24px;
+
+    .server-item {
+      display: flex;
+      flex-direction: column;
+      height: 189px;
+      padding: 16px;
+      background-image: linear-gradient(to top, rgba(230, 219, 255, 0.2) 0, rgba(230, 219, 255, 0) 100%);
+      text-align: center;
+
+      &:hover {
+        .server-info {
+          .class-info-title {
+            opacity: 0;
+          }
+          .list-class {
+            opacity: 1;
+          }
+        }
+      }
+      &.disabled {
+        .server-title,
+        .capacity,
+        .class-info-title,
+        .list-class {
+          opacity: 0.2;
+        }
+        .btn {
+          pointer-events: none;
+          border: 0;
+          background: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.2);
+        }
+      }
+      &.empty {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-image: linear-gradient(to top, rgba(134, 134, 134, 0.2) 0%, rgba(134, 134, 134, 0) 100%);
+
+        &::before {
+          content: '';
+          width: 77px;
+          height: 89px;
+          background: url('~@/assets/img/common/mirage/logo-mirage.webp') 0 0  / cover no-repeat;
+        }
+      }
+    }
+
+    .class-info {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      align-self: stretch;
+      column-gap: 8px;
+      position: relative;
+      margin: 8px 0;
+      height: 40px;
+      text-align: left;
+
+      .class-info-title {
+        display: block;
+        width: 100%;
+        font-size: 14px;
+        text-align: center;
+        transition: opacity 400ms ease;
+
+        .count {
+          font-size: 1.16666;
+          font-weight: 700;
+        }
+      }
+      .list-class {
+        opacity: 0;
+      }
+    }
+
+    .list-class {
+      position: absolute;
+      top: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex: 1;
+      width: 100%;
+      max-width: 480px;
+      padding-left: 0;
+      list-style: none;
+      transition: opacity 400ms ease;
+
+      > li {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 40px;
+        line-height: 16px;
+
+        &[data-character-class="1"] {
+          .logo {
+            &::after {
+              background-position-x: -25px;
+            }
+          }
+        }
+        &[data-character-class="2"] {
+          .logo {
+            &::after {
+              background-position-x: -42px;
+            }
+          }
+        }
+        &[data-character-class="3"] {
+          .logo {
+            &::after {
+              background-position-x: -59px;
+            }
+          }
+        }
+        &[data-character-class="5"] {
+          .logo {
+            &::after {
+              background-position-x: -76px;
+            }
+          }
+        }
+        &[data-character-class="4"] {
+          .logo {
+            &::after {
+              background-position-x: -93px;
+            }
+          }
+        }
+      }
+
+      .logo {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 24px;
+        background: url('~@/assets/img/common/mirage/sp-valley-class-icon.png') 0 0 / auto 24px no-repeat;
+        line-height: 0;
+        font-size: 0;
+
+        &::after {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          background: url('~@/assets/img/common/mirage/sp-valley-class-icon.png') 0 -4px / auto 24px no-repeat;
+        }
+      }
+      .quantity {
+        display: block;
+        font-size: 14px;
+      }
+    }
+
+    .server-title {
+      line-height: 1.333;
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .server-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 4px;
+
+      .capacity {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding-bottom: 16px;
+        width: 100%;
+        font-size: 14px;
+        color: rgba(255, 255, 255, 0.6);
+
+        em {
+          color: #fff;
+        }
+      }
+    }
+
+    .wrap-btn {
+      display: flex;
+      width: 100%;
+
+      .btn {
+        flex: 1;
+
+        &-primary-mirage {
+          height: 40px !important;
+          border-style: solid;
+          border-width: 1px;
+          border-image-source: linear-gradient(to bottom, #dd714e 0%, #620 100%);
+          border-image-slice: 1;
+          background-image: linear-gradient(to right, #620 0%, #f40 51%, #620 100%);
+        }
+
+        &:disabled {
+          pointer-events: none;
+          border: 0;
+          background: rgba(255, 255, 255, 0.1);
+          color: rgba(255, 255, 255, 0.2);
+        }
+      }
+    }
+  }
+
+  .count-down {
+    display: flex;
+    align-items: center;
+    column-gap: 24px;
+
+    > div {
+      display: flex;
+      align-items: center;
+      column-gap: 13px;
+      height: 32px;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .icon-battle {
+      position: relative;
+      padding-left: 31px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: calc(50% - 12px);
+        left: 0;
+        width: 27px;
+        height: 24px;
+        background: url('~@/assets/img/common/mirage/ico-27-battle.webp') 0 0 / 100% no-repeat;
+      }
+    }
+
+    .half {
+      dd {
+        display: flex;
+        align-items: center;
+      }
+    }
+
+    .wrap-flip {
+      display: flex;
+      align-items: center;
+      gap: 1px;
+      font-size: 20px;
+
+      .item-flip {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 24px;
+        height: 32px;
+        background: url('~@/assets/img/common/mirage-countdown/bg-empty.png') 50% 0 / 100% 32px no-repeat;
+      }
+    }
+
+    .icon-locked {
+      width: 32px;
+      height: 32px;
+      background: url('~@/assets/img/common/mirage/ico-locked-dark.webp') 0 0 / cover no-repeat;
+      font-size: 0;
+    }
+  }
+
+  &.is-locked {
+    .count-down {
+      .wrap-flip {
+        .item-flip {
+          background-image: url('~@/assets/img/common/mirage-countdown/bg-empty-dark.png');
+        }
+      }
+    }
+  }
+
+  .is-mobile & {
+    width: 100%;
+    background-size: 960px auto;
+    background-image: none;
+
+    .valley-header {
+      flex-direction: column;
+      row-gap: 16px;
+      padding: 0;
+
+      .valley-title {
+        text-align: center;
+      }
+    }
+    .valley-notice {
+      flex-wrap: wrap;
+      margin-bottom: 0;
+      padding: 0;
+
+      &__date {
+        width: 100%;
+        margin-top: 4px;
+        padding-left: 56px;
+      }
+    }
+    .valley-content {
+      grid-column-gap: 1px;
+      grid-template-columns: repeat(2, 1fr);
+      margin: 0;
+      padding: 0;
+
+      .server-title {
+        font-size: 20px;
+      }
+      .server-item {
+        width: 100%;
+        background-image: linear-gradient(to bottom, rgba(230, 219, 255, 0.1) 0, rgba(230, 219, 255, 0) 100%);
+
+        &:hover {
+          .server-info {
+            .class-info-title {
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .class-info {
+        flex-direction: column;
+        justify-content: center;
+        row-gap: 8px;
+        margin: 6px 0;
+
+        .class-info-title {
+          width: auto;
+        }
+        .list-class {
+          opacity: 1;
+          position: static;
+          flex: none;
+          column-gap: 8px;
+          width: 100%;
+
+          > li {
+            column-gap: 4px;
+            flex-direction: row;
+          }
+        }
+      }
+    }
+    .count-down {
+      align-self: stretch;
+      column-gap: 1px;
+
+      > div {
+        align-items: stretch;
+        column-gap: 0;
+        font-size: 14px;
+
+        dt {
+          display: flex;
+          align-items: center;
+          margin-right: 1px;
+          padding: 0 11px;
+          background-image: linear-gradient(to bottom, #e40 0%, #810 100%);
+        }
+      }
+      .half {
+        flex: 1;
+
+        dt {
+          flex: 1;
+          flex-direction: row-reverse;
+        }
+      }
+
+      .icon-battle {
+        padding-left: 24px;
+
+        &::before {
+          top: calc(50% - 9px);
+          width: 20px;
+          height: 18px;
+        }
+      }
+      .wrap-flip {
+        font-size: 18px;
+
+        .item-flip {
+          width: 20px;
+        }
+      }
+    }
+
+    &.is-locked {
+      .count-down {
+        > div {
+          dt {
+            background-image: linear-gradient(to bottom, #333 0%, #111 100%);
+          }
+        }
+        .icon-locked {
+          width: 28px;
+          background-image: url('~@/assets/img/common/mirage/ico-locked-dark-m.webp');
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,234 @@
+.exchange-rate-card {
+  --exchange-rate-card-width: 589px;
+  --exchange-rate-card-height: 371px;
+  --exchange-rate-card-margin-x: 19px;
+  --exchange-rate-card-display-bg-color: #060606;
+  --exchange-rate-card-display-value-width: 36px;
+  --exchange-rate-card-display-point-width: 8px;
+  --exchange-rate-card-display-value-height: 70px;
+
+  width: var(--exchange-rate-card-width);
+  height: var(--exchange-rate-card-height);
+  border: 1px solid transparent;
+  border-radius: 24px;
+  background-image: linear-gradient(126deg, #fff 2%, rgba(255, 255, 255, 0.3) 51%, #fff 94%);
+  box-shadow: 0 0 240px 0 rgba(249, 225, 10, 0.5);
+  background-origin: border-box;
+  background-clip: border-box, border-box;
+  text-align: left;
+  line-height: normal;
+  color: #000;
+
+  img {
+    max-width: 100%;
+    vertical-align: top;
+  }
+
+  .inner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 100%;
+    padding: 27px var(--exchange-rate-card-margin-x);
+    background-image: linear-gradient(123deg, #daaa00 3%, #ceaf60 6%, #fff 12%, #c5b952 22%, #867900 65%, #ebe07d 81%, #a19200 90%), linear-gradient(126deg, #fff 2%, rgba(255, 255, 255, 0) 51%, #fff 94%);
+    border-radius: 24px;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: -60px;
+      left: 119px;
+      width: 80px;
+      height: 120px;
+      background: url("~@/assets/img/desktop/exchange-rate-card/img-shine.webp") 0 0 / cover no-repeat;
+      transform: rotate(119deg);
+    }
+  }
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    column-gap: 20px;
+    height: 58px;
+    margin-bottom: 13px;
+
+    .standard-per {
+      display: flex;
+      align-items: center;
+      column-gap: 4px;
+      flex: 1;
+
+      .amount {
+        font-size: 48px;
+        font-weight: 700;
+        line-height: normal;
+      }
+    }
+  }
+  &__body {
+    .display-exchange-rate {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 19px;
+      background-color: var(--exchange-rate-card-display-bg-color);
+
+      span {
+        width: var(--exchange-rate-card-display-value-width);
+        height: var(--exchange-rate-card-display-value-height);
+        font-size: 0;
+        background: url("~@/assets/img/desktop/exchange-rate-card/sp-digit.webp") 0 0 / 370px auto no-repeat;
+
+        &[data-num-value='0'] {
+          background-position: 0 0;
+        }
+        &[data-num-value='1'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -1 - 1px);
+        }
+        &[data-num-value='2'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -2 - 2px);
+        }
+        &[data-num-value='3'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -3 - 3px);
+        }
+        &[data-num-value='4'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -4 - 4px);
+        }
+        &[data-num-value='5'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -5 - 5px);
+        }
+        &[data-num-value='6'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -6 - 6px);
+        }
+        &[data-num-value='7'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -7 - 7px);
+        }
+        &[data-num-value='8'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -8 - 8px);
+        }
+        &[data-num-value='9'] {
+          background-position-x: calc(var(--exchange-rate-card-display-value-width) * -9 - 9px);
+        }
+        &[data-num-value='.'] {
+          width: var(--exchange-rate-card-display-point-width);
+          background-position: calc(var(--exchange-rate-card-display-value-width) * -5 - 5px) calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value='h'] {
+          background-position-y: calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value='y'] {
+          background-position: calc(var(--exchange-rate-card-display-value-width) * -1 - 1px) calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value='d'] {
+          background-position: calc(var(--exchange-rate-card-display-value-width) * -2 - 2px) calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value='u'] {
+          background-position: calc(var(--exchange-rate-card-display-value-width) * -3 - 3px) calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value='s'] {
+          background-position: calc(var(--exchange-rate-card-display-value-width) * -4 - 4px) calc(var(--exchange-rate-card-display-value-height) * -1 - 2px);
+        }
+        &[data-unit-value]:nth-last-of-type(3) {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    column-gap: 50px;
+    position: absolute;
+    left: var(--exchange-rate-card-margin-x);
+    right: var(--exchange-rate-card-margin-x);
+    bottom: 37px;
+
+    .txt {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 700;
+    }
+
+    .logo-trinity {
+      width: 45px;
+      height: 42px;
+    }
+  }
+
+  .is-mobile & {
+    --exchange-rate-card-width: 344px;
+    --exchange-rate-card-height: 220px;
+    --exchange-rate-card-margin-x: 9px;
+    --exchange-rate-card-display-bg-color: #000;
+    --exchange-rate-card-display-value-width: 21px;
+    --exchange-rate-card-display-point-width: 5px;
+    --exchange-rate-card-display-value-height: 40px;
+
+    border-radius: 12px;
+
+    .inner {
+      padding: var(--exchange-rate-card-margin-x);
+      border-radius: 12px;
+
+      &::before {
+        display: none;
+      }
+    }
+
+    &__head {
+      margin-bottom: 8px;
+      height: 40px;
+
+      .standard-per {
+        .amount {
+          font-size: 33px;
+        }
+      }
+    }
+    &__body {
+      .display-exchange-rate {
+        gap: 4px;
+        padding: 17px 14px;
+
+        span {
+          background-image: url("~@/assets/img/mobile/exchange-rate-card/sp-digit.webp");
+          background-size: 219px auto;
+
+          &[data-unit-value]:nth-last-of-type(3) {
+            margin-left: 11px;
+          }
+        }
+      }
+    }
+    &__footer {
+      bottom: 12px;
+
+      .txt {
+        font-size: 12px;
+      }
+      .logo-trinity {
+        width: 34px;
+        height: 32px;
+      }
+    }
+  }
+}
+
+
+@media screen and (max-width: 320px) {
+  .exchange-rate-card {
+    .is-mobile & {
+      --exchange-rate-card-width: 95%;
+
+      &__body {
+        .display-exchange-rate {
+          gap: 2px;
+          padding: 10px 8px 10px 4px;
+        }
+      }
+    }
+  }
+}

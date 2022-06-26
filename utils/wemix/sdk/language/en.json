@@ -1,0 +1,18 @@
+{
+  "qr.title.prefix": "Connect to",
+  "qr.title.suffix": "",
+  "qr.remain": "Time left",
+  "qr.text1":"Scan the QR Code through WEMIX Wallet",
+  "qr.step1":"Start WEMIX Wallet",
+  "qr.step2":"Click the icon on the top",
+  "qr.step3":"Verify after code scan",
+  "qr.other1":"Available to scan with other QR Code readers.",
+  "qr.remain.format":"{mm}(m) {ss}(s)",
+  "qr.expired":"Expired.",
+
+  "qr.text2":"Verification will be done through WEMIX Wallet.",
+  "qr.step1.mobile":"WEMIX Wallet auto-runs",
+  "qr.step2.mobile":"Verification in WEMIX Wallet completes",
+  "qr.step3.mobile":"Go back to the page after verification",
+  "qr.allow.popup.mobile" :"If WEMIX Wallet does not run, please unlock the pop-up block."
+}

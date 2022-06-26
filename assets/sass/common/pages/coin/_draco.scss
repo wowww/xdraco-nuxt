@@ -1,0 +1,2108 @@
+.guide-draco {
+  .list-connect-process {
+    .v-window-item {
+      .v-image {
+        color: var(--content-color);
+
+        img {
+          display: block;
+          max-width: 100%;
+        }
+
+        .desc {
+          margin-top: 16px;
+          text-align: center;
+        }
+      }
+    }
+
+    .v-carousel__controls {
+      position: static;
+      margin-top: 30px;
+      height: auto;
+
+      .v-carousel__controls__item {
+        margin: 0 1px;
+
+        .v-icon {
+          opacity: .2;
+          font-size: 12px !important;
+        }
+
+        &.v-item--active {
+          &::before {
+            opacity: 0;
+          }
+
+          .v-icon {
+            opacity: 1;
+          }
+        }
+      }
+    }
+  }
+
+  .derby {
+    margin-top: 64px;
+
+    .description {
+      margin-top: 24px;
+    }
+  }
+
+  .guide-bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 400px;
+    line-height: 1.43;
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    text-decoration: none;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 0;
+      width: 100%;
+      height: 100%;
+      background: url('~@/assets/img/mobile/draco/bg-bottom.webp') 50% 0 / auto 100% no-repeat;
+    }
+
+    &__inner {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bi {
+      margin-bottom: 14px;
+      width: 188px;
+      height: 58px;
+      font-size: 0;
+      background: url('~@/assets/img/mobile/bi-mir4.png') 50% 0 / auto 100% no-repeat;
+    }
+
+    .wrap-link {
+      margin-top: 46px;
+
+      .link {
+        width: 189px;
+        height: 56px;
+        line-height: 0;
+        font-size: 0;
+        background-position: 0 0;
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        &:first-of-type {
+          margin-top: 0;
+        }
+
+        &.google {
+          background-image: url('~@/assets/img/mobile/btn-googleplay.webp');
+        }
+
+        &.apple {
+          background-image: url('~@/assets/img/mobile/btn-appstore.webp');
+        }
+      }
+    }
+  }
+
+  .wrap-image {
+    margin: 24px 0 8px;
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    &.by-viewer {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        width: 48px;
+        height: 48px;
+        background: url('~@/assets/img/mobile/draco/btn-viewer.webp') 0 0 / cover no-repeat;
+      }
+    }
+  }
+
+  .desc-info {
+    position: relative;
+    margin-top: 40px;
+    font-size: 12px;
+    color: #fff;
+
+    &::before {
+      content: '';
+      display: block;
+      width: 16px;
+      height: 16px;
+      background: url('~@/assets/img/desktop/draco/icon-info.webp') 0 0 / cover no-repeat;
+    }
+  }
+
+  .trinity-area {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    margin-top: 40px;
+    padding: 24px;
+    background-color: rgb(255 255 255 / 5%);
+
+    .trinity-info {
+      width: 100%;
+
+      .trinity-title {
+        position: relative;
+        padding-left: 30px;
+        font-weight: 500;
+        color: #fff;
+
+        &::before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 3px;
+          left: 0;
+          width: 22px;
+          height: 21px;
+          background: url('~@/assets/img/desktop/draco/icon-trinity.webp') 0 0 / cover no-repeat;
+        }
+      }
+
+      .trinity-desc {
+        position: relative;
+        margin-top: 8px;
+        line-height: 24px;
+        font-size: 14px;
+        color: rgb(255 255 255 / 50%);
+      }
+    }
+
+    .trinity-circle {
+      position: relative;
+      width: 231px;
+      height: 220px;
+      background: url('~@/assets/img/desktop/draco/img-triangulation.webp') 0 0 / cover no-repeat;
+
+      span {
+        position: absolute;
+        font-size: 12px;
+        color: #fff;
+        background-color: transparent !important;
+
+        &.green {
+          top: 47px;
+          left: 21px;
+        }
+
+        &.blue {
+          top: 47px;
+          right: 21px;
+        }
+
+        &.red {
+          bottom: 31px;
+          left: calc(50%);
+          transform: translateX(-50%);
+        }
+
+        &.white {
+          top: 87px;
+          left: calc(50%);
+          transform: translateX(-50%);
+          color: #000;
+        }
+      }
+    }
+
+    a {
+      display: inline-block;
+      position: relative;
+      padding-left: 31px;
+      font-size: 14px;
+      color: #fff;
+
+      &::before {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 3px;
+        left: 0;
+        width: 23px;
+        height: 16px;
+        background: url('~@/assets/img/desktop/draco/icon-youtube.webp') 0 0 / cover no-repeat;
+      }
+    }
+  }
+}
+
+.is-desktop {
+  .guide-draco {
+    .list-connect-process {
+      .v-window__container {
+        &:hover {
+          .v-window__prev,
+          .v-window__next {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+      }
+
+      .v-window-item {
+        .v-image {
+          .desc {
+            margin-top: 24px;
+          }
+        }
+      }
+
+      .v-window__prev,
+      .v-window__next {
+        top: calc(50% - 30px - 26px);
+        margin: 0;
+        border-radius: 0;
+        transition: all 300ms .2s ease;
+
+        .v-btn--icon {
+          width: auto;
+          height: auto;
+
+          .v-icon {
+            width: inherit;
+            height: inherit;
+
+            &::before {
+              content: '';
+              display: block;
+              line-height: 0;
+              font-size: 0;
+              width: 56px;
+              height: 56px;
+              background: url('~@/assets/img/desktop/draco/btn-prev-arrow.webp') 50% 50% / cover no-repeat;
+            }
+          }
+        }
+      }
+
+      .v-window__prev {
+        transform: translateX(-80px);
+      }
+
+      .v-window__next {
+        transform: translateX(80px);
+
+        .v-btn--icon {
+          .v-icon {
+            &::before {
+              transform: rotateY(180deg);
+            }
+          }
+        }
+      }
+    }
+
+    .derby {
+      .description {
+        margin-top: 40px;
+      }
+
+      .display-price {
+        dd {
+          .sup {
+            top: -1em;
+          }
+        }
+      }
+
+      &__date {
+        font-size: 12px;
+      }
+    }
+
+    .guide-bottom {
+      line-height: 1.4;
+      font-size: 20px;
+      text-align: center;
+
+      &::before {
+        background: url('~@/assets/img/desktop/draco/bg-bottom.webp') 50% 50% / cover no-repeat;
+      }
+
+      .bi {
+        margin: 0 auto 22px;
+        width: 270px;
+        height: 84px;
+        background: url('~@/assets/img/desktop/bi-mir4.png') 50% 0 / auto 100% no-repeat;
+      }
+
+      .wrap-link {
+        display: flex;
+        margin-top: 45px;
+
+        .link {
+          margin-left: 16px;
+
+          &.google {
+            background-image: url('~@/assets/img/desktop/btn-googleplay.webp');
+          }
+
+          &.apple {
+            background-image: url('~@/assets/img/desktop/btn-appstore.webp');
+          }
+        }
+      }
+    }
+
+    .wrap-youtube {
+      position: relative;
+      margin-top: 40px;
+      padding-top: 56.25%;
+      height: 0;
+
+      iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &.no-gutter {
+        left: calc(50% - ((var(--section-inner-width) + var(--gutter-width)) / 2));
+        padding-top: 0;
+        width: calc(100% + var(--gutter-width));
+        height: auto;
+
+        .inner {
+          position: relative;
+          padding-top: 56.25%;
+        }
+      }
+    }
+
+    .wrap-image {
+      margin: 0 0 8px;
+
+      &.by-viewer {
+        cursor: zoom-in;
+
+        &::before {
+          width: 62px;
+          height: 62px;
+          background: url('~@/assets/img/desktop/draco/btn-viewer.webp') 0 0 / cover no-repeat;
+          opacity: 0;
+          transition: opacity 400ms ease;
+        }
+
+        &:hover {
+          &::before {
+            opacity: 1;
+          }
+        }
+      }
+
+      + .text-center {
+        font-size: 12px;
+      }
+    }
+
+    .desc-info {
+      width: 100%;
+      margin-top: 20px;
+      padding-left: 26px;
+
+      &:before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+
+    .trinity-area {
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-top: 24px;
+      padding: 24px 24px 40px 24px;
+
+      .trinity-info {
+        width: 626px;
+
+        .trinity-title {
+          &:before {
+            top: 50%;
+            transform: translateY(-50%);
+          }
+        }
+
+        .trinity-desc {
+          padding-bottom: 70px;
+        }
+      }
+
+      a {
+        position: absolute !important;
+        bottom: 32px;
+        left: 32px;
+
+        &:after {
+          content: '';
+          display: block;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          width: 0;
+          height: 1px;
+          background-color: #fff;
+          transition: width 0.3s;
+        }
+
+        &:hover {
+          &:after {
+            width: 100%;
+          }
+        }
+      }
+    }
+
+    &#guideStep {
+      padding-bottom: 96px;
+
+      h4 {
+        &.title {
+          margin: 0 0 16px 0 !important;
+          line-height: 40px !important;
+          font-size: 20px !important;
+          color: #fff;
+
+          &.first-step {
+            margin-top: 64px !important;
+            line-height: 28px !important;
+          }
+        }
+      }
+
+      .divide-half {
+        margin: 16px 0 64px !important;
+
+        .description {
+          dt {
+            margin-bottom: 16px;
+          }
+
+          dd {
+            font-size: 14px;
+
+            p {
+              margin-bottom: 12px;
+              line-height: 22px;
+
+              &:last-child {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        .area {
+          max-width: calc(50% - 20px);
+
+          > p {
+            font-size: 14px;
+            line-height: 22px;
+          }
+        }
+      }
+
+      .desc {
+        margin-top: 8px;
+        line-height: 28px;
+        font-size: 12px;
+      }
+
+      .v-carousel__controls {
+        display: none;
+      }
+    }
+  }
+
+  .v-application {
+    .intro-draco {
+      padding-bottom: 0 !important;
+      min-height: 100vh;
+      background-color: #020219;
+      color: var(--content-color);
+
+      .section {
+        max-width: none;
+      }
+
+      .section__inner {
+        width: 960px !important;
+
+        &.no-gutter {
+          left: calc(50% - ((var(--section-inner-width) + var(--gutter-width)) / 2));
+          padding-top: 0;
+          width: 960px;
+          height: auto;
+        }
+
+        h3 {
+          &.title {
+            font-size: 36px !important;
+            line-height: 56px;
+          }
+        }
+
+        h4 {
+          &.title {
+            margin: 40px 0 24px;
+
+            &.mt-80 {
+              margin-top: 80px;
+            }
+
+            &.mt-120 {
+              margin-top: 120px;
+            }
+          }
+        }
+
+        &.smeltery {
+          margin-top: 120px;
+
+          .derby-wrap {
+            height: 251px;
+            margin-bottom: 64px;
+            padding: 54px 0 0;
+            background: #1c0032;
+            box-sizing: border-box;
+
+            .derby {
+              width: 960px;
+              padding-bottom: 36px;
+
+              .display-price {
+                .change {
+                  height: 31px;
+                  padding: 0 6px;
+                  font-size: 20px;
+                }
+
+                .amount {
+                  font-size: 48px;
+                }
+              }
+            }
+
+            .derby__date {
+              width: 960px;
+            }
+          }
+        }
+      }
+
+      #part2 {
+        .between-wrap {
+          display: flex;
+          justify-content: space-between;
+
+          > div {
+            width: 691px;
+          }
+        }
+
+        .link-type1 {
+          display: inline-block;
+          position: relative;
+          margin-top: 16px;
+          padding-right: 13px;
+          line-height: 18px;
+          font-size: 14px;
+          color: #fff;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: calc(100% - 13px);
+            height: 1px;
+            background-color: #fff;
+          }
+
+          &::after {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 6px;
+            right: 0;
+            width: 9px;
+            height: 9px;
+            background: url('~@/assets/img/desktop/draco/icon-link.webp') 50% 0 / cover no-repeat;
+          }
+        }
+      }
+
+      #part3 {
+        margin-top: 120px;
+
+        .section__inner {
+          h3 {
+            &.title {
+              font-size: 32px !important;
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 720px;
+        background: url("~@/assets/img/desktop/draco/main-bg.webp") 50% 0px / auto 100% no-repeat;
+        transform: translateY(60px);
+        transition: opacity 1200ms 0.2s ease-in-out, transform 1200ms ease-out;
+      }
+
+      &__inner {
+        position: relative;
+        z-index: 1;
+        line-height: 1.75;
+        font-size: 24px;
+      }
+
+      .float-bottom {
+        display: flex;
+        justify-content: space-between;
+        gap: 0 2px;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: 120px !important;
+        background-color: var(--bg-container);
+        transform: translateY(120px);
+        transition: height 400ms ease-in, transform 500ms 0.3s ease;
+
+        .part {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex: 1;
+          background-color: #200039;
+        }
+
+        .v-carousel {
+          height: 100% !important;
+
+          .v-window__container,
+          .v-carousel__item {
+            height: inherit !important;
+          }
+
+          .v-window__container {
+            width: 100%;
+          }
+
+          .v-responsive {
+            &__content {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+          }
+        }
+
+        .coin {
+          line-height: 1.33;
+          font-size: 18px;
+          color: #fff;
+          text-align: center;
+          text-decoration: none;
+
+          > a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          &__name {
+            display: inline-block;
+            margin-right: 16px;
+            line-height: 1.75;
+            font-size: 12px;
+            color: var(--content-color);
+            vertical-align: middle;
+
+            .name {
+              line-height: 1.35;
+              text-align: left;
+              font-size: 14px;
+              font-weight: 700;
+              color: #fff;
+
+              span {
+                font-size: 11px;
+                font-weight: normal;
+              }
+            }
+          }
+
+          &__volume {
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            vertical-align: middle;
+
+            .amount {
+              display: flex;
+              align-items: center;
+              font-weight: 700;
+              line-height: 1.2;
+              font-size: 40px;
+              transition: all 200ms 0.3s ease-in;
+
+              &::before {
+                display: block;
+                margin-right: 9px;
+                width: 32px;
+                height: 32px;
+              }
+
+              &.wemix {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-wemix.webp") 0 0 / cover no-repeat;
+                }
+              }
+
+              &.wemix-credit {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-wemixcredit.webp") 0 0 / cover no-repeat;
+                }
+              }
+
+              &.draco {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-draco.webp") 0 0 / cover no-repeat;
+                }
+              }
+            }
+
+            .sup {
+              top: -0.5em;
+              margin-left: 4px;
+              line-height: 1.75;
+              font-weight: 700;
+              font-size: 16px;
+            }
+
+            .change {
+              @include volume-change(
+                $height: 24px,
+                $font-size: 14px,
+              );
+              padding: 0 5px;
+              min-width: 30px;
+              line-height: 27px;
+              margin-left: 12px;
+              font-weight: 700;
+            }
+          }
+
+          &__date {
+            margin-top: 16px;
+            line-height: 1.5;
+            font-size: 12px;
+            color: rgba(#fff, 0.5);
+            text-align: center;
+          }
+        }
+      }
+
+      .define {
+        position: relative;
+        margin-top: calc(430px - var(--header-height));
+        transition: opacity 500ms 1.2s ease-in;
+
+        &::before {
+          content: "";
+          display: block;
+          position: relative;
+          margin: 0 auto;
+          padding: 0;
+          width: 404px;
+          height: 224px;
+          font-size: 0 !important;
+          background: url("~@/assets/img/desktop/draco/bi-draco.webp") 0 0 / cover no-repeat;
+        }
+
+        h2 {
+          margin-top: -46px;
+          line-height: 40px;
+          text-align: center;
+          font-size: 32px;
+          color: #fff;
+        }
+      }
+
+      .derby-wrap {
+        width: 100%;
+        height: 320px;
+        margin-bottom: 40px;
+        padding-top: 75px;
+        background: url("~@/assets/img/desktop/draco/derby-bg.webp") 50% 50% / auto 100% repeat-x;
+        transform: none;
+      }
+
+      .description {
+        color: #ffffff80;
+
+        .title {
+          margin-top: 40px;
+          font-size: 24px !important;
+          line-height: 40px;
+          color: #fff;
+          font-weight: 700;
+        }
+
+        dl {
+          margin-bottom: 40px;
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+
+        dt {
+          color: #fff;
+          line-height: 28px;
+          margin-bottom: 0;
+        }
+
+        dd {
+          line-height: 28px;
+        }
+
+        p {
+          margin-bottom: 40px;
+
+          &.fs-14 {
+            font-size: 14px;
+            line-height: 22px;
+            letter-spacing: 0.01em;
+          }
+
+          span {
+            color: #fff;
+          }
+
+          &:last-of-type {
+            margin-bottom: 0;
+          }
+        }
+      }
+
+      .derby {
+        width: var(--section-inner-width);
+        padding-right: 0;
+        padding-left: 0;
+
+        .display-price {
+          dt {
+            min-height: 37px;
+            font-size: 16px;
+          }
+
+          dd {
+            margin-top: 8px;
+          }
+
+          .amount {
+            font-size: 56px;
+          }
+
+          .change {
+            height: 40px;
+            font-size: 20px;
+            padding: 0 12px;
+          }
+
+          .sup {
+            top: -1.3em;
+          }
+        }
+      }
+
+      .derby__date {
+        width: var(--section-inner-width);
+        margin: 0 auto;
+      }
+
+      .youtube-area {
+        margin-top: 98px;
+        background-color: #000;
+
+        .wrap-youtube {
+          position: relative;
+          padding-top: 0;
+          height: 0;
+          transition: padding 0.3s;
+
+          &.wrap-video--open {
+            padding-top: 56.25%;
+          }
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          &.no-gutter {
+            left: calc(50% - ((var(--section-inner-width) + var(--gutter-width)) / 2));
+            padding-top: 0;
+            width: calc(100% + var(--gutter-width));
+            height: auto;
+
+            .inner {
+              position: relative;
+              padding-top: 56.25%;
+            }
+          }
+        }
+      }
+
+      .desc-define {
+        margin-top: 80px;
+        padding: 0 100px;
+        line-height: 32px;
+        text-align: center;
+        font-weight: bold;
+        font-size: 20px;
+        color: rgba($color: #fff, $alpha: 0.75);
+      }
+
+      .process {
+        position: relative;
+        margin: 80px 0;
+        width: 100%;
+        height: 184px;
+        font-size: 0;
+        background: url("~@/assets/img/desktop/draco/infograph-exchange.webp") 50% 0 / (1658 / 2 + px) auto no-repeat;
+      }
+
+      .wrap-exchange {
+        display: flex;
+        flex-wrap: wrap;
+        position: relative;
+        margin: 80px 0 120px;
+        width: 100%;
+
+        .exchange {
+          display: flex;
+          flex-direction: column;
+          row-gap: 2px;
+          justify-content: center;
+          align-items: center;
+          margin: 2px 0 0 2px;
+          width: calc(33.3% - 2px);
+          height: 80px;
+          background-color: rgba(#fff, .05);
+
+          img {
+            display: block;
+          }
+
+          &:nth-child(3n+1) {
+            margin-left: 0;
+            width: 33.3%;
+          }
+        }
+
+        .nation {
+          font-size: 10px;
+          color: #fff;
+          line-height: normal;
+        }
+      }
+
+      .formula {
+        margin-top: 80px;
+        margin-bottom: 80px;
+        line-height: 1.5;
+        font-size: 12px;
+        text-align: center;
+
+        img {
+          display: block;
+          margin: 0 auto 24px;
+        }
+
+        .date {
+          display: block;
+          margin-top: 4px;
+        }
+      }
+
+      .v-expansion-panels {
+        border-radius: 0;
+
+        .v-expansion-panel {
+          margin-top: 4px;
+          color: #fff;
+          background-color: rgba(#fff, 0.05);
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          .v-icon {
+            &::before {
+              content: "";
+              font-size: 0;
+              width: 40px;
+              height: 40px;
+              background: url("~@/assets/img/desktop/draco/btn-arrow-expension.webp") 50% 50% / auto 100% no-repeat;
+            }
+          }
+        }
+
+        .v-expansion-panel-header {
+          padding: 12px 12px 12px 32px;
+          height: 64px;
+          font-size: 16px;
+          font-weight: 700;
+
+          .v-expansion-panel-header__icon {
+            margin-right: 12px
+          }
+        }
+
+        .v-expansion-panel-content {
+          line-height: 1.75;
+          font-size: 16px;
+          color: var(--content-color);
+        }
+
+        .v-expansion-panel-content__wrap {
+          display: flex;
+          justify-content: space-between;
+          padding: 32px;
+          padding-top: 16px;
+
+          > p {
+            flex: 1;
+          }
+        }
+
+        .wrap-image {
+          margin-left: 40px;
+          width: 240px;
+          text-align: right;
+
+          img {
+            display: block;
+            width: 100%;
+          }
+        }
+      }
+
+      .nav-scroll {
+        position: fixed;
+        top: calc(50% - 40px);
+        left: 0;
+        z-index: 1;
+        opacity: 0;
+        transform: translateX(-100px);
+        transition: opacity 400ms 1.2s linear, transform 400ms 1s ease;
+
+        &__list {
+          padding: 0;
+
+          li {
+            display: flex;
+            align-items: center;
+            margin-top: 20px;
+
+            &::before {
+              content: "";
+              display: block;
+              position: relative;
+              margin-right: 16px;
+              width: 24px;
+              height: 1px;
+              background-color: rgba(#fff, 0.25);
+              transition: all 300ms ease-in;
+            }
+
+            a {
+              display: block;
+              padding: 5px 0;
+              line-height: 1.5;
+              color: rgba(#fff, 0.35);
+              font-size: 12px;
+              text-decoration: none;
+              text-shadow: 2px 2px 2px rgba(#000, 0.5);
+              transition: all 300ms 0.2s ease-in;
+            }
+
+            &:first-of-type {
+              margin-top: 0;
+            }
+
+            &:hover {
+              &::before {
+                transform: translateX(6px);
+              }
+
+              a {
+                transition-delay: 0s;
+                color: rgba(#fff, 0.6);
+              }
+            }
+
+            &.active {
+              &::before {
+                background-color: #fff;
+              }
+
+              a {
+                line-height: 1.29;
+                font-size: 14px;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+
+      .init-app & {
+        &::before {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .define {
+          opacity: 1;
+        }
+      }
+
+      .desc-info {
+        position: relative;
+        margin-top: 40px;
+        padding-left: 26px;
+        font-size: 12px;
+        color: #fff;
+
+        &:before {
+          content: '';
+          display: block;
+          position: absolute;
+          top: 50%;
+          left: 0;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 16px;
+          background: url('~@/assets/img/desktop/draco/icon-info.webp') 0 0 / cover no-repeat;
+        }
+      }
+
+      .trinity-area {
+        margin-top: 40px;
+        padding: 24px;
+        background-color: rgba(255, 255, 255, 0.05);
+
+        .trinity-title {
+          position: relative;
+          padding-left: 30px;
+          font-weight: 500;
+          color: #fff;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 21px;
+            background: url('~@/assets/img/desktop/draco/icon-trinity.webp') 0 0 / cover no-repeat;
+          }
+        }
+
+        .trinity-desc {
+          position: relative;
+          margin-top: 4px;
+          line-height: 24px;
+          font-size: 14px;
+          color: rgba(255, 255, 255, 0.5);
+        }
+
+        a {
+          display: inline-block;
+          position: relative;
+          padding-left: 31px;
+          margin-top: 14px;
+          font-size: 14px;
+          color: #fff;
+          line-height: 22px;
+
+          &:before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 23px;
+            height: 16px;
+            background: url('~@/assets/img/desktop/draco/icon-youtube.webp') 0 0 / cover no-repeat;
+          }
+
+          &:after {
+            content: '';
+            display: block;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 1px;
+            background-color: #fff;
+            transition: width 0.3s;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+      }
+
+      .footer {
+        margin-bottom: var(--intro-draco-float-height--scrolled) !important;
+      }
+    }
+  }
+}
+
+.init-intro-draco {
+  .v-application {
+    .intro-draco {
+      .float-bottom {
+        transform: translateY(0);
+      }
+    }
+  }
+
+  .nav-scroll {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 961px) {
+  .is-desktop {
+    .v-application {
+      .intro-draco {
+        .init-intro-draco & {
+          .nav-scroll {
+            opacity: 0;
+            transform: translateX(-100px);
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .guide-draco {
+    .contents {
+      padding-top: 64px;
+    }
+
+    .list-connect-process {
+      padding-bottom: 80px;
+
+      .v-window-item {
+        .v-image {
+          .desc {
+            font-size: 12px;
+          }
+        }
+      }
+      .v-carousel__controls {
+        display: none;
+      }
+    }
+
+    .derby {
+      padding: 64px 0;
+      background-color: #1c0032;
+
+      .description {
+        margin-top: 24px;
+      }
+    }
+
+    .guide-bottom {
+      .wrap-link {
+        .link {
+          margin-top: 8px;
+        }
+      }
+    }
+
+    .desc-info {
+      line-height: 20px;
+
+      &::before {
+        margin-bottom: 4px;
+      }
+    }
+
+    .trinity-area {
+      flex-direction: column;
+      padding: 24px;
+
+      a {
+        place-self: flex-start;
+        position: relative;
+        margin-top: 16px;
+        text-decoration: none;
+      }
+    }
+
+    &.smeltery {
+      h3 {
+        &.title {
+          margin-bottom: 24px;
+        }
+      }
+
+      p {
+        line-height: 22px;
+        font-size: 14px;
+      }
+
+      .derby {
+        background: #1c0032 !important;
+      }
+    }
+
+    &#guideStep {
+      .description {
+        .text-center {
+          margin-top: 8px;
+          font-size: 12px;
+          line-height: 28px;
+        }
+      }
+
+      dl {
+        margin: 24px 0;
+
+        dd {
+          p {
+            margin-bottom: 0;
+            margin-top: 8px;
+            padding: 0;
+            line-height: 20px;
+          }
+
+        }
+      }
+
+      .wrap-image {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .v-application {
+    .intro-draco {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+      background-color: #060012;
+      color: var(--content-color);
+
+      &::after {
+        display: none !important;
+      }
+
+      .section {
+        z-index: 1;
+        max-width: 640px;
+        width: 100%;
+        margin: 80px 0 0;
+        padding: 0 24px;
+        box-sizing: border-box;
+
+        &.mt-64 {
+          margin-top: 64px;
+        }
+
+        &.full-width {
+          max-width: 100%;
+          margin-top: 24px;
+
+          .derby {
+            height: auto;
+            min-height: 404px;
+            box-sizing: border-box;
+            margin: 0;
+            padding: 64px 24px;
+
+            .display-price {
+              dt {
+                font-size: 14px;
+              }
+
+              dd {
+                margin-bottom: 0;
+              }
+            }
+          }
+        }
+
+        &.solo {
+          margin-top: 0;
+
+          .description {
+            margin: 24px 0 0;
+          }
+        }
+
+        .no-gutter {
+          position: relative;
+          left: 50% !important;
+          transform: translateX(-50%);
+          width: calc(100% + 48px) !important;
+          max-width: none;
+        }
+
+        .wrap-youtube {
+          position: relative;
+          margin-top: 68px;
+          padding-top: 0;
+          height: 0;
+          transition: padding 0.3s;
+
+
+          &.wrap-video--open {
+            .inner {
+              padding-top: 56.25% !important;
+            }
+          }
+
+          iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+          }
+
+          &.no-gutter {
+            left: 50% !important;
+            transform: translateX(-50%);
+            padding-top: 0;
+            width: calc(100% + 48px) !important;
+            height: auto;
+
+            .inner {
+              position: relative;
+              padding: 0;
+              transition: padding 1s;
+            }
+          }
+        }
+
+        h3 {
+          &.title {
+            font-size: 28px !important;
+            line-height: 32px;
+          }
+        }
+
+        .derby-title {
+          &.title {
+            width: 327px;
+            margin: 0 auto 40px;
+            font-size: 28px !important;
+            line-height: 40px;
+          }
+        }
+
+        h4 {
+          &.title {
+            margin: 64px 0 16px;
+            font-size: 20px !important;
+            line-height: 32px;
+            color: #fff;
+
+            &.mt-40 {
+              margin-top: 40px;
+            }
+
+            &.mt-80 {
+              margin-top: 80px;
+            }
+          }
+        }
+
+        .description {
+          p {
+            margin-bottom: 16px;
+            line-height: 22px;
+            font-size: 14px;
+
+            &.small {
+              font-size: 12px;
+            }
+
+            span {
+              color: #fff;
+            }
+          }
+
+          .trinity-area {
+            margin-top: 24px;
+
+            .trinity-desc {
+              p {
+                padding: 0;
+              }
+            }
+          }
+
+          dl {
+            margin-bottom: 24px;
+          }
+
+          dt {
+            font-size: 14px;
+            line-height: 28px;
+            margin-bottom: 0;
+            color: #fff;
+          }
+
+          dd {
+            font-size: 14px;
+            line-height: 22px;
+          }
+
+          .img-center {
+            display: block;
+            margin: 0 auto 32px;
+          }
+
+          .link-type1 {
+            display: inline-block;
+            position: relative;
+            margin-top: 9px;
+            padding-right: 13px;
+            line-height: 18px;
+            font-size: 14px;
+            color: #fff;
+            text-decoration: none;
+
+            &::before {
+              content: '';
+              display: block;
+              position: absolute;
+              bottom: -2px;
+              left: 0;
+              width: calc(100% - 13px);
+              height: 1px;
+              background-color: #fff;
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              position: absolute;
+              top: 6px;
+              right: 0;
+              width: 9px;
+              height: 9px;
+              background: url('~@/assets/img/desktop/draco/icon-link.webp') 50% 0 / cover no-repeat;
+            }
+          }
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 55px;
+        left: 0;
+        z-index: 0;
+        width: 100%;
+        height: 640px;
+        background: url("~@/assets/img/mobile/draco/main-bg.webp") 50% 0 / auto (1280 / 2 + px) no-repeat;
+        transition: opacity 1200ms 0.2s ease-in-out, transform 1200ms ease-out;
+      }
+
+      &::after {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 201px;
+        background: url("~@/assets/img/mobile/draco/footer-bg.webp") 50% 0 / cover no-repeat;
+      }
+
+      &__inner {
+        position: relative;
+        z-index: 1;
+        line-height: 1.75;
+        font-size: 24px;
+      }
+
+      .float-bottom {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        z-index: 5;
+        width: 100%;
+        height: clamp(96px, 96px, 96px) !important;
+        background-color: #200039;
+        transition: transform 500ms 0.5s ease;
+
+        .v-window__container,
+        .v-carousel__item {
+          height: inherit !important;
+        }
+
+        .coin {
+          line-height: 1.33;
+          font-size: 14px;
+          color: #fff;
+          text-align: center;
+
+          > a {
+            color: inherit;
+            text-decoration: none;
+          }
+
+          &__name {
+            display: inline-block;
+            margin-right: 8px;
+            line-height: 1.3;
+            font-size: 12px;
+            color: var(--content-color);
+            vertical-align: middle;
+            text-align: left;
+
+            span {
+              font-size: 10px;
+              font-weight: normal;
+            }
+
+            .name {
+              line-height: 1.35;
+              font-weight: 700;
+              color: #fff;
+            }
+          }
+
+          &__volume {
+            display: inline-flex;
+            justify-content: flex-end;
+            align-items: center;
+            vertical-align: middle;
+
+            .amount {
+              display: flex;
+              align-items: center;
+              font-weight: 700;
+              line-height: 1.13;
+              font-size: 24px;
+
+              &::before {
+                display: block;
+                margin-right: 4px;
+                width: 24px;
+                height: 24px;
+              }
+
+              &.wemix {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-wemix.webp") 0 0 / cover no-repeat;
+                }
+              }
+
+              &.wemix-credit {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-wemixcredit.webp") 0 0 / cover no-repeat;
+                }
+              }
+
+              &.draco {
+                &::before {
+                  content: "";
+                  background: url("~@/assets/img/mobile/symbol-draco.webp") 0 0 / cover no-repeat;
+                }
+              }
+            }
+
+            .sup {
+              line-height: 1.75;
+              font-weight: 700;
+              font-size: 12px;
+            }
+
+            .change {
+              @include volume-change(
+                $height: 22px,
+                $font-size: 12px,
+                $padding: 4px
+              );
+
+              margin-left: 8px;
+              font-weight: 700;
+            }
+          }
+
+          &__date {
+            margin-top: 10px;
+            line-height: 18px;
+            font-size: 12px;
+            color: rgba(#fff, 0.5);
+            text-align: center;
+          }
+        }
+      }
+
+      .define {
+        margin-top: 298px;
+        transition: opacity 500ms 1.2s ease-in;
+
+        &::before {
+          content: "";
+          display: block;
+          position: relative;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 343px;
+          height: 208px;
+          font-size: 0 !important;
+          background: url("~@/assets/img/mobile/draco/bi-draco.webp") 50% 50% / cover no-repeat;
+          box-sizing: content-box;
+        }
+
+        h2 {
+          margin-top: -20px;
+          padding: 0 20px;
+          font-size: 24px;
+          line-height: 28px;
+          text-align: center;
+          color: #fff;
+        }
+      }
+
+      .desc-define {
+        margin-top: 40px;
+        line-height: 24px;
+        text-align: center;
+        font-weight: bold;
+        color: rgba($color: #fff, $alpha: 75%);
+      }
+
+      .derby {
+        flex-direction: column;
+        margin-bottom: -16px;
+        padding: 0;
+        height: 480px;
+        background: url("~@/assets/img/mobile/draco/derby-bg.webp") 50% 50% / auto 100% no-repeat;
+
+        .display-price {
+          margin-bottom: 40px;
+          flex: none;
+
+          dt {
+            display: block;
+            line-height: 1.188;
+            font-size: 16px;
+            font-weight: 700;
+            text-align: center;
+            min-height: auto;
+          }
+
+          dd {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 16px 0 8px;
+            line-height: 1.17;
+            font-weight: 700;
+          }
+
+          .amount {
+            display: flex;
+            line-height: 1.4;
+            font-size: 40px;
+          }
+
+          .sup {
+            top: -0.9em;
+          }
+
+          .change {
+            padding: 0 6px;
+
+            &.plus {
+              background-color: #1b4;
+            }
+
+            &.minus {
+              background-color: #f13;
+            }
+          }
+        }
+      }
+
+      .process {
+        margin-top: 64px;
+        margin-bottom: 24px;
+        height: 649px;
+        font-size: 0;
+        background: url("~@/assets/img/mobile/draco/infograph-exchange.webp") 50% 50% / auto 100% no-repeat;
+      }
+
+      .wrap-exchange {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        .exchange {
+          display: flex;
+          flex-direction: column;
+          row-gap: 4px;
+          justify-content: center;
+          align-items: center;
+          margin-top: 2px;
+          width: calc(50% - 2px);
+          height: 80px;
+          background-color: rgba(#fff, .05);
+          text-decoration: none;
+
+          img {
+            display: block;
+          }
+
+          &:nth-child(even) {
+            width: 50%;
+          }
+        }
+
+        .nation {
+          font-size: 10px;
+          color: #fff;
+          line-height: normal;
+        }
+      }
+
+      .formula {
+        margin-top: 48px;
+        margin-bottom: 96px;
+        line-height: 1.5;
+        font-size: 12px;
+        text-align: center;
+
+        img {
+          display: block;
+          width: 288px;
+          margin: 0 auto 24px;
+        }
+
+        p {
+          line-height: 18px !important;
+        }
+      }
+
+      .v-expansion-panels {
+        border-radius: 0;
+
+        .v-expansion-panel {
+          margin-top: 4px;
+          color: #fff;
+          background-color: rgba(#fff, 0.05);
+
+          &:first-of-type {
+            margin-top: 0;
+          }
+
+          .v-icon {
+            &::before {
+              content: "";
+              font-size: 0;
+              width: 40px;
+              height: 40px;
+              background: url("~@/assets/img/mobile/draco/btn-arrow-expension.webp") 50% 50% / auto 100% no-repeat;
+            }
+          }
+        }
+
+        .v-expansion-panel-header {
+          padding: 12px 12px 12px 32px;
+          height: 64px;
+          font-size: 16px;
+          font-weight: 700;
+        }
+
+        .v-expansion-panel-content {
+          line-height: 1.75;
+          font-size: 16px;
+          color: var(--content-color);
+        }
+
+        .v-expansion-panel-content__wrap {
+          padding: 32px;
+          padding-top: 13px;
+          font-size: 14px;
+        }
+
+        .wrap-image {
+          margin-top: 40px;
+          text-align: right;
+
+          img {
+            display: inline-block;
+            vertical-align: top;
+          }
+        }
+      }
+
+      .init-app & {
+        &::before {
+          opacity: 1;
+          transform: translateY(0);
+        }
+
+        .define {
+          opacity: 1;
+        }
+      }
+
+      .init-intro-draco & {
+        .float-bottom {
+          transform: translateY(0);
+        }
+      }
+
+      .desc-info {
+        position: relative;
+        margin-top: 24px;
+        line-height: 20px;
+        font-size: 12px;
+        color: #fff;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 16px;
+          height: 16px;
+          margin-bottom: 4px;
+          background: url('~@/assets/img/desktop/draco/icon-info.webp') 0 0 / cover no-repeat;
+        }
+      }
+
+      .trinity-area {
+        padding: 24px;
+        background-color: rgb(255 255 255 / 5%);
+
+        .trinity-title {
+          position: relative;
+          padding-left: 30px;
+          font-weight: 500;
+          color: #fff;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 22px;
+            height: 21px;
+            background: url('~@/assets/img/desktop/draco/icon-trinity.webp') 0 0 / cover no-repeat;
+          }
+        }
+
+        .trinity-desc {
+          position: relative;
+          margin-top: 8px;
+          line-height: 24px;
+          font-size: 14px;
+          color: rgb(255 255 255 / 50%);
+        }
+
+        a {
+          display: inline-block;
+          position: relative;
+          padding-left: 31px;
+          margin-top: 16px;
+          font-size: 14px;
+          color: #fff;
+          text-decoration: none;
+
+          &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 3px;
+            left: 0;
+            width: 23px;
+            height: 16px;
+            background: url('~@/assets/img/desktop/draco/icon-youtube.webp') 0 0 / cover no-repeat;
+          }
+        }
+      }
+
+      .footer {
+        margin-bottom: var(--intro-draco-float-height) !important;
+        width: 100%;
+        background-color: #0b0b2c;
+
+        &__inner {
+          width: 100%;
+          max-width: 640px;
+        }
+      }
+    }
+  }
+}

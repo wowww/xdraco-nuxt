@@ -1,0 +1,121 @@
+.contents.mirage {
+  .mirage-latest-raid-result {
+    margin: 32px 0;
+
+    .caution-update {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 2px;
+      padding: 18px 30px;
+      background-image: linear-gradient(to right, rgb(255 255 255 / 0%) 0%, rgb(255 255 255 / 15%) 49%, rgb(255 255 255 / 0%) 100%);
+      text-align: center;
+
+      .caution-txt {
+        margin-right: 4px;
+        font-size: 14px;
+        line-height: 1.43;
+        color: #fff;
+      }
+    }
+
+    .wrap-round-raid-info {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+      padding:  16px 12px;
+      background-color: #ffffff1a;
+
+      .mirage-round-raid-info {
+        flex: 1;
+      }
+
+      .btn-mirage {
+        column-gap: 4px;
+        max-width: 160px;
+        padding: 9px 13px;
+        height: auto;
+        font-weight: 400;
+
+        &::before {
+          content: '';
+          flex-shrink: 0;
+          width: 20px;
+          height: 20px;
+          background: url('~@/assets/img/common/mirage/ico-20-ranking.webp') 0 0 / 100% auto no-repeat;
+        }
+      }
+    }
+
+    .wrap-button {
+      display: flex;
+      justify-content: center;
+      margin-top: 16px;
+
+      .btn {
+        background-color: #ffffff1a;
+
+        .ico-calendar {
+          position: relative;
+          padding-left: 26px;
+          font-size: 14px;
+          line-height: normal;
+          font-weight: normal;
+          letter-spacing: normal;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 18px;
+            height: 18px;
+            background: url('~@/assets/img/common/mirage/ico-18-calendar.webp') 0 0 / 100% auto no-repeat;
+          }
+        }
+      }
+    }
+
+    .is-mobile & {
+      margin: 24px 0;
+
+      .section-title-bar {
+        display: flex;
+        align-items: flex-start;
+        flex-direction: column;
+        padding: 16px;
+
+        .section-title {
+          margin-bottom: 0;
+          padding: 0;
+          line-height: 1.6;
+        }
+
+        .raid-date {
+          font-size: 14px;
+        }
+      }
+
+      .wrap-round-raid-info {
+        column-gap: 8px;
+        padding: 16px;
+
+        .btn-mirage {
+          max-width: 110px;
+        }
+
+        .raid-date {
+          display: none;
+        }
+      }
+
+      .wrap-button {
+        padding: 0 16px;
+
+        .btn {
+          flex: 1;
+        }
+      }
+    }
+  }
+}

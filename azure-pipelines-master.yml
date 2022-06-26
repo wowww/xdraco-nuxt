@@ -1,0 +1,33 @@
+# Node.js with React
+# Build a Node.js project that uses React.
+# Add steps that analyze code, save build artifacts, deploy, and more:
+# https://docs.microsoft.com/azure/devops/pipelines/languages/javascript
+
+trigger: none
+
+pool:
+  vmImage: ubuntu-latest
+
+jobs:
+  - job: Build
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '14.x'
+      displayName: 'Install Node.js'
+
+    - script: |
+        yarn global add nuxt
+      displayName: 'Install nuxt'
+
+    - script: |
+        yarn
+        yarn generate:master
+      displayName: 'Install dependency and generate'
+    - task: PublishPipelineArtifact@1
+      inputs:
+        targetPath: '$(Pipeline.Workspace)/dist'
+        artifact: 'xdraco-nuxt-master'
+        publishLocation: 'pipeline'
+
+

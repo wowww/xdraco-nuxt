@@ -1,0 +1,2248 @@
+.hydra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background-color: #0b0b57;
+
+  .section {
+    margin: 0;
+    width: 100%;
+    max-width: initial;
+    padding: var(--section-padding-x);
+  }
+
+  .section__inner {
+    margin: 0 auto;
+    max-width: var(--coin-section-inner-width);
+  }
+
+  .section-dynamics {
+    min-height: 500px;
+    padding-top: 40px;
+    padding-bottom: 60px;
+    background-color: #000;
+    color: #fff;
+
+    em {
+      font-style: normal;
+    }
+
+    .section-title {
+      margin-bottom: 40px;
+      font-size: 32px;
+      line-height: 1.25;
+      color: #0f69ff;
+      text-align: center;
+    }
+
+    .supply {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-top: 1px solid rgba($color: #c4c4c4, $alpha: 25%);
+      border-bottom: 1px solid rgba($color: #c4c4c4, $alpha: 25%);
+      padding: 24px 21px;
+
+      > p {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 16px;
+      }
+
+      .tit {
+        margin-bottom: 8px;
+        font-size: 16px;
+        line-height: 1.75;
+        color: rgba($color: #fff, $alpha: 75%);
+      }
+    }
+
+    .amount {
+      display: flex;
+      align-items: center;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 0.7;
+
+      &::before {
+        content: '';
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+        background: url("~@/assets/img/desktop/hydra/img-symbol-hydra.webp") 0 0 / cover no-repeat;
+      }
+    }
+
+    .tbl-title {
+      margin: 40px 0 16px;
+      font-size: 20px;
+      line-height: 2;
+      text-align: center;
+    }
+
+    .table {
+      width: 100%;
+      table-layout: fixed;
+      font-size: 14px;
+      line-height: 1.43;
+
+      th {
+        padding: 8px 16px;
+        background-color: rgb(255 255 255 / 10%);
+        color: rgba($color: #fff, $alpha: 50%);
+        font-weight: normal;
+      }
+
+      td {
+        padding: 16px;
+        background-color: rgb(15 105 255 / 20%);
+        color: rgba($color: #fff, $alpha: 75%);
+      }
+
+      .desc {
+        color: #fff;
+        margin-bottom: 8px;
+      }
+
+      .sub-desc {
+        font-size: 12px;
+        line-height: 1.5;
+      }
+
+      .wrap-value {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+      }
+
+      .value {
+        font-size: 16px;
+        line-height: 1.25;
+        color: #fff;
+      }
+
+      .percent {
+        margin-top: 4px;
+        font-size: 12px;
+        line-height: 1.67;
+        color: #fff;;
+      }
+
+      .txt-warn {
+        display: flex;
+        margin-top: 8px;
+        color: #f00;
+        font-size: 12px;
+        line-height: 1.5;
+
+        &::before {
+          content: '';
+          display: block;
+          width: 1px;
+          height: 1px;
+          border: 1px solid;
+          border-radius: 100%;
+          margin: 8px 7px 0 5px;
+        }
+      }
+    }
+
+    .summary {
+      display: flex;
+      justify-content: flex-end;
+      padding: 16px;
+
+      > p {
+        display: flex;
+        align-items: center;
+      }
+
+      .tit {
+        font-size: 14px;
+        line-height: 1.14;
+        margin-right: 20px;
+      }
+
+      .amount {
+        font-size: 20px;
+        line-height: 1;
+
+        &::before {
+          width: 20px;
+          height: 20px;
+          margin-right: 4px;
+        }
+      }
+    }
+
+    .define-fee {
+      padding-top: 16px;
+      border-top: 1px solid rgb(196 196 196 / 25%);
+      font-size: 14px;
+
+      dt {
+        margin-bottom: 8px;
+        line-height: 1.14;
+      }
+
+      dd {
+        line-height: 1.43;
+        color: rgb(255 255 255 / 60%);
+      }
+    }
+  }
+
+  .section-main {
+    position: relative;
+    min-height: 720px;
+    padding-top: var(--navdsp-height);
+    padding-right: 0;
+    padding-left: 0;
+    color: #fff;
+    font-size: 22px;
+    background: #004367 url('~@/assets/img/mobile/hydra/bg-hydra-main.webp') 50% 0 / auto 100% no-repeat;
+    text-align: center;
+
+    img {
+      display: block;
+    }
+
+    .section__inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+      position: relative;
+      padding-top: 446px;
+      max-width: 700px;
+      height: 100%;
+      box-sizing: border-box;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 2px;
+        left: calc(50% - 357px);
+        width: 838px;
+        height: 505px;
+        background: url('~@/assets/img/mobile/hydra/main-dragon.webp') 0 0 / 100% no-repeat;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: 64px;
+        left: calc(50% - 250px);
+        width: 500px;
+        height: 500px;
+        background: url('~@/assets/img/mobile/hydra/main-hydra-coin.webp') 0 0 / 100% no-repeat;
+      }
+    }
+
+    .section-title {
+      position: relative;
+      z-index: 1;
+    }
+
+    .section-headline {
+      margin-top: 58px;
+      margin-bottom: 8px;
+      font-size: 24px;
+      line-height: 32px;
+    }
+
+    p {
+      color: rgba($color: #fff, $alpha: 75%);
+      line-height: 1.25;
+      font-size: 16px;
+
+      em,
+      strong {
+        color: #fff;
+        font-style: normal;
+      }
+
+      ~ p {
+        margin-top: 8px;
+      }
+    }
+  }
+
+  .section-video {
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: #000;
+
+    .section__inner {
+      padding: 0 !important;
+
+      .wrap-video {
+        position: relative;
+        padding-top: 0;
+        transition: padding 0.3s;
+
+        &.wrap-video--open {
+          padding-top: 56.25%;
+        }
+
+        iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          min-height: 100%;
+        }
+      }
+    }
+  }
+
+  .section-prologue {
+    background: #116 url('~@/assets/img/mobile/hydra/bg-prologue.webp') 50% 50% / 960px auto no-repeat;
+
+    @media screen and (max-width: 581px) {
+      background-position: 50% 0;
+    }
+
+    .wrap-prologue {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 0;
+      color: #fff;
+
+      h3 {
+        text-align: center;
+        font-weight: bold;
+        font-size: 32px;
+      }
+
+      p {
+        margin-top: 16px;
+        line-height: 28px;
+        font-size: 16px;
+      }
+    }
+  }
+
+  .section-chronicles {
+    background: #116 url('~@/assets/img/mobile/hydra/bg-chronicle.webp') 50% 0 / cover no-repeat;
+
+    .wrap-chronicles {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 1000px;
+      padding: 40px 0;
+      color: #fff;
+
+      h3 {
+        width: 100%;
+        line-height: 36px;
+        font-size: 32px;
+        font-weight: bold;
+        text-align: center;
+
+        &::after {
+          content: '';
+          display: block;
+          height: 12px;
+          margin: 24px 0 0;
+          background: url('~@/assets/img/desktop/hydra/bg-chronicles-line.webp') 50% 0 / cover no-repeat;
+        }
+      }
+
+      ul {
+        list-style-type: none;
+        padding: 0;
+
+        li {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          margin-top: 24px;
+
+          @media screen and (max-width: 386px) {
+            &:nth-child(1) {
+              img {
+                width: 100%;
+              }
+            }
+          }
+
+          p {
+            line-height: 28px;
+          }
+        }
+      }
+    }
+  }
+
+  .section-spectrums {
+    background-color: #000;
+
+    .wrap-spectrums {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 1226px;
+      padding: 40px 0;
+
+      h3 {
+        line-height: 32px;
+        text-align: center;
+        font-size: 32px;
+        color: #0f69ff;
+      }
+
+      ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex-direction: row;
+        padding: 0;
+
+        li {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          list-style-type: none;
+          width: 100%;
+
+          &.tied {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-tied.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          &.synthetic {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-synthetic.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          &.diplomatic {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-diplomatic.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          &.governance {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-governance.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          &.defi {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-defi.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          &.tradable {
+            background: url('~@/assets/img/desktop/hydra/bg-spectrums-tradable.webp') 50% 113px / auto 200px no-repeat;
+          }
+
+          .title {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            color: #fff;
+
+            &::before {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              margin: 40px 0 16px;
+              background-color: rgba($color: #c4c4c4, $alpha: 25%);
+            }
+
+            &::after {
+              content: '';
+              display: block;
+              padding-bottom: 232px;
+            }
+          }
+
+          p {
+            width: 100%;
+            text-align: left;
+            font-size: 14px;
+            color: rgba($color: #fff, $alpha: 60%);
+            line-height: 1.43;
+          }
+        }
+      }
+    }
+  }
+
+  .section-defi {
+    min-height: 480px;
+    background: #ffe501 url('~@/assets/img/mobile/hydra/bg-defi.webp') 50% 0 / 960px auto no-repeat;
+    color: #000;
+    text-align: center;
+    line-height: 1.38;
+
+    .section-title {
+      margin-top: 40px;
+      font-size: 32px;
+      line-height: 44px;
+    }
+
+    .section-define {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 290px 0 32px;
+
+      > div {
+        margin-bottom: 48px;
+      }
+
+      dt {
+        line-height: 1;
+
+        img {
+          vertical-align: top;
+        }
+      }
+
+      dd {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        text-align: left;
+
+        p {
+          margin: 16px 0 32px;
+        }
+      }
+    }
+
+    .link-detail {
+      position: relative;
+      padding: 8px 44px 8px 16px;
+      background-color: #000;
+      color: #fe0;
+      text-decoration: none;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 16px;
+        width: 18px;
+        height: 1px;
+        background-color: #ffdf00;
+      }
+
+      &::after {
+        content: '';
+        position: absolute;
+        top: calc(50% - 5px);
+        right: 17px;
+        width: 10px;
+        height: 10px;
+        border: 1px solid #ffdf00;
+        border-width: 0 1px 1px 0;
+        transform: rotate(-45deg);
+      }
+    }
+
+    .soon {
+      padding: 8px 16px;
+      background-color: rgb(0 0 0 / 10%);
+      color: rgb(0 0 0 / 30%);
+    }
+  }
+
+  .section-roadmap {
+    min-height: 924px;
+    background: #00105e url('~@/assets/img/mobile/hydra/bg-roadmap.webp') 50% 0 / 960px 100% no-repeat;
+    padding-top: 0;
+    padding-bottom: 64px;
+
+    .wrap-roadmap {
+      color: #fff;
+
+      .section-title {
+        margin-top: 40px;
+        margin-bottom: 24px;
+        font-size: 32px;
+        line-height: 1.25;
+        text-align: center;
+      }
+
+      .step-roadmap {
+        padding-left: 0;
+        list-style: none;
+
+        .date {
+          display: block;
+          padding-top: 16px;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.14;
+        }
+      }
+
+      .step-roadmap-item {
+        position: relative;
+
+        &.step1 {
+          .step-detail {
+            background-image: url('~@/assets/img/mobile/hydra/img-roadmap-hydra.webp');
+            background-size: 78px 96px;
+            background-position-x: 10px;
+          }
+        }
+
+        &.step2 {
+          .step-detail {
+            background-image: url('~@/assets/img/mobile/hydra/img-roadmap-hsp.png');
+          }
+        }
+
+        &.step3 {
+          .step-detail {
+            background-image: url('~@/assets/img/mobile/hydra/img-roadmap-mirage.webp');
+            background-size: 75px 84px;
+            background-position-x: 11px;
+          }
+        }
+
+        &.step4 {
+          .step-detail {
+            background-image: url('~@/assets/img/mobile/hydra/img-roadmap-hsp.png');
+          }
+        }
+
+        &.step5 {
+          .step-detail {
+            background-image: url('~@/assets/img/mobile/hydra/img-roadmap-axd.webp');
+          }
+        }
+
+        &.step1,
+        &.step2,
+        &.step3,
+        &.step4 {
+          padding-bottom: 26px;
+
+          &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -24px;
+            right: -24px;
+            height: 26px;
+            background: url('~@/assets/img/mobile/hydra/step-arrow-down.webp') 50% 50% / 100% auto no-repeat;
+          }
+        }
+
+        &.step2,
+        &.step3 {
+          .step-detail {
+            dd {
+              line-height: 1.54;
+            }
+          }
+        }
+      }
+
+      .step-detail {
+        display: flex;
+        flex-flow: column wrap;
+        row-gap: 8px;
+        min-height: 128px;
+        padding: 16px 0 16px 112px;
+        background-repeat: no-repeat;
+        background-size: 96px 96px;
+        background-position-y: 16px;
+        box-sizing: border-box;
+
+        dt {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.25;
+        }
+
+        dd {
+          font-size: 13px;
+          line-height: 1.69;
+        }
+      }
+    }
+  }
+
+  .section-summoning {
+    padding-bottom: 40px;
+    background-color: #0b0b57;
+
+    .section__inner {
+      padding: 0 !important;
+    }
+
+    .wrap-summoning {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      color: #fff;
+
+      .section-title {
+        margin-top: 40px;
+        margin-bottom: 45px;
+        font-size: 32px;
+        line-height: 40px;
+        text-align: center;
+        color: #0f69ff;
+      }
+
+      .summoning-area {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .refining {
+          display: flex;
+          justify-content: center;
+          align-self: stretch;
+          margin-right: -24px;
+          margin-left: -24px;
+          padding: 24px 20px;
+          box-sizing: content-box;
+          background-color: rgba($color: #000, $alpha: 20%);
+
+          .plus {
+            font-size: 40px;
+            font-weight: 100;
+            color: rgba($color: #fff, $alpha: 50%);
+          }
+
+          .refining-item {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+
+            > p {
+              margin-bottom: 12px;
+              text-align: center;
+              font-weight: bold;
+              font-size: 12px;
+              line-height: normal;
+            }
+
+            .refining-box {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              padding-top: 8px;
+
+              .image {
+                position: relative;
+                font-size: 0;
+
+                .count {
+                  position: absolute;
+                  bottom: -7px;
+                  right: -6px;
+                  font-size: 20px;
+
+                  strong {
+                    font-size: 16px;
+                    line-height: 1.25;
+                  }
+                }
+              }
+            }
+
+            .refining-wrap {
+              display: flex;
+              align-items: center;
+
+              .subscript {
+                align-items: center;
+                min-height: 32px;
+                margin-top: 8px;
+                line-height: normal;
+                font-size: 11px;
+                text-align: center;
+                word-break: break-word;
+              }
+            }
+
+            &.refining-base {
+              .refining-wrap {
+                width: 96px;
+                justify-content: center;
+              }
+
+              + .plus {
+                display: flex;
+                align-items: center;
+                margin: 0 8px;
+                font-weight: 300;
+              }
+            }
+
+            &.refining-free {
+              .refining-wrap {
+                justify-content: center;
+                width: 200px;
+                padding: 25px 10px;
+                background-color: rgba($color: #9700ff, $alpha: 20%);
+                box-sizing: border-box;
+
+                .plus {
+                  font-size: 32px;
+                  margin: 0 4px;
+                  line-height: 1.75;
+                  color: #fff;
+                }
+              }
+            }
+          }
+
+          .define-refining {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            line-height: normal;
+
+            dt {
+              font-size: 12px;
+            }
+
+            dd {
+              display: flex;
+              align-items: center;
+            }
+
+            .draco,
+            .septaria {
+              position: relative;
+              padding-left: 28px;
+              font-size: 28px;
+              line-height: 56px;
+              font-weight: 600;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                margin-top: -12px;
+                width: 24px;
+                height: 24px;
+                background: url('~@/assets/img/desktop/hydra/icon-refining-draco.webp') 0 0 / 100% no-repeat;
+              }
+            }
+
+            .septaria {
+              padding-left: 23px;
+
+              &::before {
+                width: 19px;
+                height: 24px;
+                background-image: url('~@/assets/img/desktop/hydra/icon-refining-septaria.webp');
+              }
+            }
+          }
+        }
+
+        .refining-metamorphic {
+          margin-top: 49px;
+
+          h4 {
+            width: 100%;
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+
+            &::after {
+              content: '';
+              display: block;
+              width: 100%;
+              height: 1px;
+              margin-top: 8px;
+              margin-bottom: 24px;
+              background-color: rgba($color: #c4c4c4, $alpha: 25%);
+            }
+          }
+
+          p {
+            margin-top: 16px;
+            line-height: 24px;
+          }
+        }
+
+        .refining-btns {
+          display: flex;
+          align-items: center;
+          margin: 24px 0 45px;
+
+          .btn-calc {
+            padding: 8px 8px 8px 12px;
+            background-color: #ffc700;
+            font-size: 14px;
+            font-weight: 500;
+            color: #000;
+            text-decoration: none;
+
+            span {
+              display: flex;
+              align-items: center;
+              position: relative;
+
+              &::after {
+                content: '';
+                display: block;
+                width: 17px;
+                height: 23px;
+                margin-left: 8px;
+                background: url('~@/assets/img/desktop/hydra/icon-calc.webp') 50% 50% / cover no-repeat;
+              }
+            }
+          }
+        }
+
+        .refining-define {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+          box-sizing: border-box;
+
+          dl {
+            width: 100%;
+
+            dt {
+              font-weight: bold;
+            }
+
+            dd {
+              margin-top: 8px;
+
+              p {
+                line-height: 21px;
+                font-size: 14px;
+                color: rgba($color: #fff, $alpha: 60%);
+              }
+
+              &.formula {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                height: 120px;
+                margin-top: 16px;
+                background-color: rgb(0 0 187 / 10%);
+
+                p {
+                  min-height: auto;
+                  margin-top: 24px;
+                  font-size: 12px;
+                  margin-bottom: 0;
+                  color: rgba($color: #fff, $alpha: 50%);
+                }
+
+                img {
+                  margin-top: 12px;
+                }
+              }
+            }
+
+            &:nth-child(2) {
+              margin-top: 45px;
+
+              .formula {
+                img {
+                  margin-top: 30px;
+                }
+              }
+            }
+          }
+        }
+
+        .caution {
+          margin-top: 45px;
+
+          dl {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 16px;
+            border: 1px solid #f00;
+          }
+
+          dt {
+            position: relative;
+            padding-left: 28px;
+            margin-bottom: 8px;
+            font-size: 16px;
+            line-height: 1.75;
+            font-weight: 700;
+
+            &::before {
+              content: '';
+              position: absolute;
+              top: 4px;
+              left: 0;
+              width: 20px;
+              height: 20px;
+              background: url('~@/assets/img/mobile/hydra/icon-warn.webp') 0 0 / 100% auto no-repeat;
+            }
+          }
+
+          dd {
+            font-size: 14px;
+            line-height: 1.43;
+            opacity: 0.6;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+
+  .section-refinery {
+    padding-bottom: 40px;
+    background-color: #000;
+    color: rgb(255 255 255 / 50%);
+    line-height: 1.57;
+
+    .section-title {
+      margin-top: 40px;
+      margin-bottom: 40px;
+      font-size: 32px;
+      color: #0f69ff;
+      line-height: 1.25;
+      text-align: center;
+    }
+
+    .section-headline {
+      font-size: 16px;
+      line-height: 1.75;
+      color: rgb(255 255 255 / 60%);
+    }
+
+    .wrap-define {
+      .define-step {
+        margin-top: 40px;
+
+        dt {
+          font-size: 20px;
+          font-weight: 700;
+          line-height: 1.4;
+          color: #fff;
+        }
+
+        dd {
+          .desc {
+            font-size: 14px;
+            font-weight: normal;
+
+            > p {
+              margin-top: 16px;
+
+              em {
+                font-style: normal;
+                color: #fff;
+              }
+            }
+
+            ul {
+              list-style: none;
+              margin: 0;
+              padding: 0;
+              margin-top: 16px;
+
+              li {
+                position: relative;
+                font-size: 12px;
+                font-weight: normal;
+                line-height: 1.33;
+                padding-left: 16px;
+                margin-top: 8px;
+
+                &:first-of-type {
+                  margin-top: 0;
+                }
+
+                &::before {
+                  content: '';
+                  position: absolute;
+                  left: 6px;
+                  top: 6px;
+                  width: 2px;
+                  height: 2px;
+                  border-radius: 100%;
+                  background-color: rgba(#fff, 0.5);
+                }
+              }
+            }
+          }
+
+          .wrap-img {
+            margin-top: 40px;
+          }
+
+          .chart {
+            display: flex;
+            flex-flow: row wrap;
+            padding-left: 0;
+            list-style: none;
+            background-color: rgb(68 115 255 / 20%);
+
+            > li {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              padding: 4px 12px;
+              width: 50%;
+              border-bottom: 1px solid rgb(255 255 255 / 10%);
+              font-size: 12px;
+              line-height: 1.83;
+              color: #fff;
+
+              &:nth-child(odd) {
+                border-right: 1px solid rgb(255 255 255 / 10%);
+              }
+
+              &:last-child {
+                border-bottom: 0;
+              }
+            }
+
+            .quantity {
+              position: relative;
+              padding-left: 15px;
+              font-size: 14px;
+              line-height: 1.43;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: calc(50% - 7px);
+                left: 0;
+                width: 12px;
+                height: 14px;
+                background: url('~@/assets/img/desktop/hydra/icon-refining-septaria.webp') 0 0 / auto 100% no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .wrap-img {
+        .wrap-image {
+          img {
+            display: block;
+            max-width: 100%;
+          }
+
+          &.by-viewer {
+            position: relative;
+            cursor: zoom-in;
+
+            &::before {
+              content: '';
+              position: absolute;
+              right: 0;
+              bottom: 0;
+              width: 62px;
+              height: 62px;
+              background: url('~@/assets/img/mobile/hydra/btn-zoom.webp') 0 0 / cover no-repeat;
+              opacity: 0;
+              transition: opacity 400ms ease;
+            }
+
+            &:hover {
+              &::before {
+                opacity: 1;
+              }
+            }
+          }
+        }
+
+        figcaption,
+        .chart-caption {
+          display: block;
+          font-size: 14px;
+          font-weight: normal;
+          line-height: 2;
+          text-align: center;
+        }
+      }
+    }
+
+    .btn-calc-wrap {
+      margin-top: 24px;
+
+      .btn-calc {
+        color: #fff;
+        font-size: 14px;
+        line-height: normal;
+
+        span {
+          display: flex;
+          position: relative;
+          padding-right: 23px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            right: 23px;
+            bottom: -3px;
+            left: 0;
+            height: 1px;
+            background-color: #fff;
+          }
+
+          &::after {
+            content: '';
+            position: absolute;
+            top: calc(50% - 8px);
+            right: 0;
+            width: 15px;
+            height: 21px;
+            margin-left: 8px;
+            background: url('~@/assets/img/mobile/hydra/icon-calc.webp') 0 0 / 100% no-repeat;
+          }
+        }
+      }
+    }
+
+    .txt-caution {
+      display: flex;
+      position: relative;
+      color: #f00;
+      font-weight: normal;
+      margin-top: 16px;
+      padding-left: 28px;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 20px;
+        height: 20px;
+        background: url('~@/assets/img/mobile/hydra/icon-warn.webp') 0 0 / contain no-repeat;
+      }
+    }
+  }
+
+  .footer {
+    margin-bottom: var(--intro-draco-float-height) !important;
+    background-color: #060622 !important;
+
+    &__inner {
+      width: 100%;
+      max-width: var(--section--inner-width);
+    }
+  }
+
+  .float-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 5;
+    width: 100%;
+    height: clamp(96px, 96px, 96px) !important;
+    background-color: #003;
+    transition: transform 500ms 0.5s ease;
+
+    .v-window__container,
+    .v-carousel__item {
+      height: inherit !important;
+    }
+
+    .coin {
+      line-height: 1.33;
+      font-size: 14px;
+      color: #fff;
+      text-align: center;
+
+      > a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      &__name {
+        display: inline-block;
+        margin-right: 8px;
+        line-height: 1.3;
+        font-size: 12px;
+        color: var(--content-color);
+        vertical-align: middle;
+        text-align: left;
+
+        span {
+          font-size: 10px;
+          font-weight: normal;
+        }
+
+        .name {
+          line-height: 1.35;
+          font-weight: 700;
+          color: #fff;
+        }
+      }
+
+      &__volume {
+        display: inline-flex;
+        justify-content: flex-end;
+        align-items: center;
+        vertical-align: middle;
+
+        .amount {
+          display: flex;
+          align-items: center;
+          font-weight: 700;
+          line-height: 1.13;
+          font-size: 24px;
+
+          &::before {
+            display: block;
+            margin-right: 4px;
+            width: 24px;
+            height: 24px;
+          }
+
+          &.wemix {
+            &::before {
+              content: "";
+              background: url("~@/assets/img/mobile/symbol-wemix.webp") 0 0 / cover no-repeat;
+            }
+          }
+
+          &.wemix-credit {
+            &::before {
+              content: "";
+              background: url("~@/assets/img/mobile/symbol-wemixcredit.webp") 0 0 / cover no-repeat;
+            }
+          }
+
+          &.draco {
+            &::before {
+              content: "";
+              background: url("~@/assets/img/mobile/symbol-draco.webp") 0 0 / cover no-repeat;
+            }
+          }
+
+          &.septaria {
+            &::before {
+              content: "";
+              width: 20px;
+              background: url('~@/assets/img/desktop/hydra/icon-refining-septaria.webp') 0 0 / cover no-repeat;
+            }
+          }
+        }
+
+        .symbol-plus {
+          margin: 0 8px;
+          font-size: 32px;
+          line-height: 1;
+          font-weight: 100;
+        }
+
+        .sup {
+          line-height: 1.75;
+          font-weight: 700;
+          font-size: 12px;
+        }
+
+        .change {
+          @include volume-change(
+            $height: 22px,
+            $font-size: 12px,
+            $padding: 4px
+          );
+
+          margin-left: 8px;
+          font-weight: 700;
+        }
+      }
+
+      &__date {
+        margin-top: 10px;
+        line-height: 18px;
+        font-size: 12px;
+        color: rgba(#fff, 0.5);
+        text-align: center;
+      }
+
+      &.refining-cost {
+        .coin__name {
+          .name {
+            font-size: 14px;
+            line-height: 1.43;
+
+            .stage {
+              display: block;
+              font-size: 10px;
+              line-height: normal;
+              color: rgba($color: #fff, $alpha: 50%);
+            }
+          }
+        }
+
+        .coin__volume {
+          .amount {
+            line-height: 1.67;
+          }
+
+          .sup {
+            top: -0.7em;
+            margin-left: 4px;
+            font-weight: normal;
+            line-height: 2;
+          }
+        }
+
+        .coin__date {
+          margin-top: 8px;
+        }
+      }
+    }
+  }
+}
+
+.is-desktop {
+  .hydra {
+    .footer {
+      margin-bottom: var(--intro-draco-float-height--scrolled) !important;
+      background-color: #060622;
+    }
+
+    .section__inner {
+      width: 960px;
+    }
+
+    .section-main {
+      --section-Main-height: 720px;
+
+      height: var(--section-Main-height);
+      padding-top: 0;
+      background: #004367 url('~@/assets/img/desktop/hydra/bg-hydra-main.webp') 50% 0 / auto 100% no-repeat;
+
+      .section__inner {
+        &::before {
+          width: 857px;
+          background: url('~@/assets/img/desktop/hydra/main-dragon.webp') 0 0 / 100% no-repeat;
+        }
+
+        &::after {
+          top: 56px;
+          background: url('~@/assets/img/desktop/hydra/main-hydra-coin.webp') 0 0 / 100% no-repeat;
+        }
+      }
+
+      .section-headline {
+        margin-top: 62px;
+        font-size: 32px;
+        line-height: 1.25;
+      }
+
+      p {
+        line-height: 1.27;
+
+        ~ p {
+          margin-top: 4px;
+        }
+      }
+    }
+
+    .section-prologue {
+      background: #116 url('~@/assets/img/desktop/hydra/bg-prologue.webp') 50% 0 / 1188px auto no-repeat;
+
+      .wrap-prologue {
+        min-height: 572px;
+      }
+
+      .hydra-calculator {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+
+        .stage {
+          text-align: right;
+          border: solid 1px #fff;
+          font-size: 12px;
+          color: #fff;
+          margin-right: 10px;
+        }
+
+        .result {
+          font-size: 24px;
+          font-weight: 500;
+        }
+      }
+    }
+
+    .section-chronicles {
+      background: #116 url('~@/assets/img/desktop/hydra/bg-chronicle.webp') 50% 0 / cover no-repeat;
+
+      .wrap-chronicles {
+        padding: 74px 0 64px;
+
+        h3 {
+          &::after {
+            width: 800px;
+            margin: 22px auto 34px;
+            background: url('~@/assets/img/desktop/hydra/bg-chronicles-line.webp') 50% 0 / auto 100% no-repeat;
+          }
+        }
+
+        ul {
+          li {
+            &:nth-child(1) {
+              img {
+                margin-right: 17px;
+              }
+            }
+
+            &:nth-child(2) {
+              flex-direction: row-reverse;
+              margin-top: -50px;
+            }
+
+            &:nth-child(3) {
+              margin-top: -38px;
+
+              img {
+                margin-right: 42px;
+              }
+            }
+
+            p {
+              width: 460px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-dynamics {
+      padding: 64px 0;
+
+      .section-title {
+        margin-bottom: 24px;
+      }
+
+      .supply {
+        min-height: 95px;
+        padding: 24px;
+
+        > p {
+          padding: 16px 0;
+          flex-direction: row;
+        }
+
+        .tit {
+          margin-right: 16px;
+        }
+      }
+
+      .amount {
+        &::before {
+          background: url("~@/assets/img/desktop/hydra/img-symbol-hydra.webp") 0 0 / cover no-repeat;
+        }
+      }
+
+      .table {
+        th,
+        td {
+          padding: 16px;
+        }
+
+        td {
+          &:nth-child(3),
+          &:nth-child(4) {
+            font-size: 16px;
+            line-height: 1.25;
+            color: #fff;
+          }
+
+          &:nth-child(3) {
+            text-align: center;
+          }
+
+          &:nth-child(4) {
+            text-align: right;
+          }
+        }
+
+        .txt-warn {
+          margin-top: 10px;
+
+          &::before {
+            border: 2px solid;
+            border-width: 2px 2px 1px 1px;
+            margin: 9px 10px 0 8px;
+          }
+        }
+      }
+
+      .summary {
+        .tit {
+          line-height: 1.43;
+          margin-right: 36px;
+        }
+      }
+
+      .define-fee {
+        padding: 16px 0 24px;
+      }
+    }
+
+    .section-spectrums {
+      .wrap-spectrums {
+        padding: 64px 0;
+
+        ul {
+          gap: 32px 8px;
+          margin: 32px 0 0;
+
+          li {
+            width: 314px;
+            padding: 24px 27px;
+
+            &.tied {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-tied.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            &.synthetic {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-synthetic.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            &.diplomatic {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-diplomatic.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            &.governance {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-governance.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            &.defi {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-defi.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            &.tradable {
+              background: url('~@/assets/img/desktop/hydra/bg-spectrums-tradable.webp') 50% 97px / auto 200px no-repeat;
+            }
+
+            .title {
+              &::after {
+                width: 100%;
+                height: 1px;
+                margin: 16px 0 232px;
+                background-color: hsla(0,0%,76.9%,.25);
+                padding-bottom: 0;
+              }
+              &::before {
+                content: none;
+              }
+            }
+
+            p {
+              margin-top: 16px;
+              padding: 0 10px;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+
+    .section-defi {
+      position: relative;
+      overflow: hidden;
+      background: #ffd300 url('~@/assets/img/desktop/hydra/bg-defi.webp') 50% 0 / auto 100% no-repeat;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -159px;
+        left: calc(50% - 400px);
+        width: 800px;
+        height: 800px;
+        background: url('~@/assets/img/desktop/hydra/bg-defi-hydra.webp') 50% 0 / 100% no-repeat;
+      }
+
+      .section__inner {
+        position: relative;
+      }
+
+      .section-title {
+        margin-top: 61px;
+      }
+
+      .section-define {
+        justify-content: space-between;
+        align-items: initial;
+        flex-direction: row;
+        margin-top: -44px;
+        margin-bottom: 47px;
+
+        > div {
+          width: 320px;
+        }
+
+        dd {
+          justify-content: space-between;
+          min-height: 328px;
+
+          p {
+            margin: 24px 0;
+          }
+        }
+      }
+
+      .link-detail {
+        &::after {
+          top: calc(50% - 4px);
+        }
+      }
+    }
+
+    .section-roadmap {
+      min-height: 560px;
+      background: #00105e url('~@/assets/img/desktop/hydra/bg-roadmap.webp') 50% 50% / cover no-repeat;
+      padding-bottom: 0;
+
+      .wrap-roadmap {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .section-title {
+          margin-top: 64px;
+          margin-bottom: 35px;
+        }
+
+        .step-roadmap {
+          display: flex;
+          width: 975px;
+          min-height: 420px;
+          margin-left: 15px;
+          background: url('~@/assets/img/desktop/hydra/bg-roadmap-step.webp') 0 100% /contain no-repeat;
+
+          .date {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            line-height: 1;
+          }
+
+          .step-roadmap-item {
+            padding-top: 52px;
+            width: 168px;
+
+            ~ .step-roadmap-item {
+              margin-left: 30px;
+            }
+
+            &.step1 {
+              &::after {
+                content: none;
+              }
+              .step-detail {
+                background: none;
+                dt {
+                  background-image: url('~@/assets/img/desktop/hydra/img-roadmap-hydra.webp');
+                  background-size: 77px 80px;
+                }
+              }
+            }
+
+            &.step2 {
+              &::after {
+                content: none;
+              }
+              .step-detail {
+                background: none;
+                dt {
+                  background-image: url('~@/assets/img/desktop/hydra/img-roadmap-hsp.png');
+                  background-size: 88px 88px;
+                }
+
+                dd {
+                  line-height: 1.54;
+                }
+              }
+            }
+
+            &.step3 {
+              &::after {
+                content: none;
+              }
+              .step-detail {
+                background: none;
+                dt {
+                  background-image: url('~@/assets/img/desktop/hydra/img-roadmap-mirage.webp');
+                  background-size: 74px 84px;
+                }
+
+                dd {
+                  line-height: 1.54;
+                }
+              }
+            }
+
+            &.step4 {
+              &::after {
+                content: none;
+              }
+              .step-detail {
+                background: none;
+                dt {
+                  background-image: url('~@/assets/img/desktop/hydra/img-roadmap-hsp.png');
+                  background-size: 89px 89px;
+                }
+              }
+            }
+
+            &.step5 {
+              .step-detail {
+                background: none;
+                dt {
+                  background-image: url('~@/assets/img/desktop/hydra/img-roadmap-axd.png');
+                  background-size: 76px 88px;
+                }
+              }
+            }
+          }
+
+          .step-detail {
+            padding: 0;
+            flex-direction: column;
+
+            dt {
+              margin-bottom: 16px;
+              padding-top: 104px;
+              line-height: 1.25;
+              background-repeat: no-repeat;
+            }
+
+            dd {
+              padding-right: 19px;
+            }
+          }
+        }
+      }
+    }
+    .section-summoning {
+      padding: 0;
+      .wrap-summoning {
+        justify-content: center;
+        padding-bottom: 80px;
+
+        .section-title {
+          margin-top: 80px;
+          margin-bottom: 40px;
+          line-height: 1.25;
+        }
+
+        .summoning-area {
+          flex-flow: column wrap;
+          justify-content: center;
+
+          .refining {
+            width: 100%;
+            padding: 37px 0 40px;
+
+            .refining-item {
+              > p {
+                font-size: 16px;
+                margin-bottom: 20px;
+              }
+
+              > span {
+                font-size: 16px;
+              }
+
+              .refining-box {
+                .image {
+                  .count {
+                    bottom: 1px;
+                    right: -5px;
+                    font-size: 24px;
+
+                    strong {
+                      font-weight: 500;
+                    }
+                  }
+                }
+              }
+
+              .refining-wrap {
+                .subscript {
+                  margin-top: 8px;
+                  font-size: 12px;
+                  text-align: center;
+                  line-height: normal;
+                }
+              }
+
+              &.refining-base {
+                .refining-wrap {
+                  width: 160px;
+                  height: 148px;
+                }
+
+                + .plus {
+                  margin: 39px 42px 0 10px;
+                }
+              }
+
+              &.refining-free {
+                .refining-wrap {
+                  min-width: 403px;
+                  height: 148px;
+                  padding: 0 10px;
+                  background-color: rgba($color: #9700ff, $alpha: 20%);
+
+                  .plus {
+                    font-size: 48px;
+                    margin: 0 16px;
+                    line-height: 1.17;
+                  }
+                }
+              }
+            }
+
+            .define-refining {
+              row-gap: 8px;
+
+              dt {
+                font-size: 14px;
+              }
+
+              .draco,
+              .septaria {
+                padding-left: 48px;
+                font-size: 40px;
+                line-height: 1.4;
+
+                &::before {
+                  margin-top: -20px;
+                  width: 41px;
+                  height: 40px;
+                }
+              }
+
+              .septaria {
+                padding-left: 38px;
+
+                &::before {
+                  width: 34px;
+                }
+              }
+            }
+          }
+
+          .refining-metamorphic {
+            margin-top: 40px;
+
+            h4 {
+              &::after {
+                margin-top: 16px;
+              }
+            }
+
+            p {
+              line-height: 28px;
+            }
+          }
+
+          .refining-btns {
+            margin: 54px 0;
+
+            .btn-calc {
+              padding: 10px 12px 9px 16px;
+            }
+          }
+
+          .refining-define {
+            justify-content: space-between;
+            padding: 24px 0 44px;
+
+            dl {
+              width: 460px;
+
+              &:nth-child(2) {
+                margin-top: 0;
+
+                .formula {
+                  img {
+                    margin-top: 30px;
+                  }
+                }
+              }
+
+              dd {
+                p {
+                  min-height: 110px;
+                }
+
+                &.formula {
+                  height: 150px;
+                  p {
+                    min-height: auto;
+                  }
+                  img {
+                    margin-top: 19px;
+                  }
+                }
+              }
+            }
+          }
+
+          .caution {
+            dt {
+              padding-left: 29px;
+              font-size: 18px;
+              line-height: 1.56;
+
+              &::before {
+                width: 21px;
+                background: url('~@/assets/img/desktop/hydra/icon-warn.webp') 0 0 / contain no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .content {
+        width: 640px;
+        min-height: 353px;
+        background: url('~@/assets/img/desktop/hydra/bg-popprologue.webp') 50% 50% / cover no-repeat;
+      }
+    }
+
+    .section-refinery {
+      padding-bottom: 80px;
+
+      .section-title {
+        margin-top: 80px;
+        margin-bottom: 24px;
+      }
+
+      .wrap-define {
+        .define-step {
+          margin-top: 64px;
+
+          dd {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-top: 16px;
+
+            .desc {
+              > p {
+                &:first-of-type {
+                  margin-top: 0;
+                }
+              }
+            }
+
+            .wrap-img {
+              flex: 0 0 460px;
+              width: 460px;
+              margin-left: 40px;
+              margin-top: -43px;
+            }
+
+            .chart {
+              flex-flow: column wrap;
+              height: 150px;
+              background: none;
+
+              > li {
+                height: 30px;
+                border-top: 1px solid rgb(255 255 255 / 10%);
+                background-color: rgb(68 115 255 / 20%);
+                width: auto;
+
+                &:nth-child(5n + 1) {
+                  border-top: 0;
+                }
+
+                &:nth-child(n + 6) {
+                  border-left: 1px solid rgb(255 255 255 / 10%);
+                }
+              }
+
+            }
+          }
+        }
+
+        .wrap-img {
+          .wrap-image {
+            &.by-viewer {
+              &::before {
+                background: url('~@/assets/img/desktop/hydra/btn-zoom.webp') 0 0 / cover no-repeat;
+              }
+            }
+          }
+        }
+      }
+
+      .btn-calc-wrap {
+        .btn-calc {
+          span {
+            &::after {
+              background: url('~@/assets/img/desktop/hydra/icon-calc.webp') 0 0 / 100% no-repeat;
+            }
+          }
+        }
+      }
+
+      .txt-caution {
+        &::before {
+          background: url('~@/assets/img/desktop/hydra/icon-warn.webp') 0 0 / contain no-repeat;
+        }
+      }
+    }
+
+    .float-bottom {
+      display: flex;
+      justify-content: space-between;
+      gap: 0 2px;
+      height: 120px !important;
+      background-color: var(--bg-container);
+      transform: translateY(120px);
+      transition: height 400ms ease-in, transform 500ms 0.3s ease;
+
+      .part {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex: 1;
+        background-color: #003;
+      }
+
+      .v-carousel {
+        height: 100% !important;
+
+        .v-window__container {
+          width: 100%;
+        }
+
+        .v-responsive {
+          &__content {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+        }
+      }
+
+      .coin {
+        font-size: 18px;
+        text-decoration: none;
+
+        &__name {
+          margin-right: 16px;
+          line-height: 1.75;
+
+          .name {
+            text-align: left;
+            font-size: 14px;
+
+            span {
+              font-size: 11px;
+            }
+
+            .stage {
+              font-size: 12px;
+              line-height: 1.33;
+              color: rgba($color: #fff, $alpha: 50%);
+            }
+          }
+        }
+
+        &__volume {
+          .amount {
+            line-height: 1.2;
+            font-size: 40px;
+            transition: all 200ms 0.3s ease-in;
+
+            &::before {
+              margin-right: 9px;
+              width: 32px;
+              height: 32px;
+            }
+
+            &.wemix {
+              &::before {
+                content: "";
+                background: url("~@/assets/img/mobile/symbol-wemix.webp") 0 0 / cover no-repeat;
+              }
+            }
+
+            &.wemix-credit {
+              &::before {
+                content: "";
+                background: url("~@/assets/img/mobile/symbol-wemixcredit.webp") 0 0 / cover no-repeat;
+              }
+            }
+
+            &.draco {
+              &::before {
+                content: "";
+                background: url("~@/assets/img/desktop/hydra/icon-coin-draco.webp") 0 0 / cover no-repeat;
+              }
+            }
+
+            &.septaria {
+              &::before {
+                content: "";
+                background: url("~@/assets/img/desktop/hydra/icon-coin-septarium.webp") 50% 50% / auto 100% no-repeat;
+              }
+            }
+          }
+
+          .symbol-plus {
+            line-height: 1.75;
+          }
+
+          .sup {
+            top: -1em;
+            margin-left: 4px;
+            line-height: 2;
+            font-weight: 400;
+          }
+
+          .change {
+            @include volume-change(
+              $height: 24px,
+              $font-size: 14px,
+            );
+
+            padding: 0 5px;
+            min-width: 30px;
+            line-height: 27px;
+            margin-left: 12px;
+          }
+        }
+
+        &__date {
+          margin-top: 16px;
+          line-height: 1.5;
+        }
+      }
+    }
+  }
+}
+
+.init-intro-hydra {
+  .v-application {
+    .hydra {
+      .float-bottom {
+        transform: translateY(0);
+      }
+    }
+  }
+}

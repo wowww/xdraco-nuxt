@@ -1,0 +1,690 @@
+.v-application {
+    .contents.playbook {
+      --section-inner-padding: 24px;
+      --section-inner-width: 960px;
+
+      padding-top: 54px;
+      min-height: 100vh;
+      color: var(--content-color);
+
+      &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        width: 100%;
+        opacity: 0;
+        transform: translateY(-20px);
+        top: 20px;
+        height: 359px;
+        background: url('~@/assets/img/mobile/playbook/playbook-topbg.webp') 50% 0 / 960px 359px no-repeat;
+        transition: opacity 0.3s ease-in-out 0.2s, transform 0.3s ease-out;
+      }
+
+      .section {
+        padding: 0 var(--section-inner-padding);
+      }
+
+      .headword {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: normal;
+        color: #fff;
+      }
+
+      .text-desc {
+        font-size: 14px;
+        font-weight: 700;
+        line-height: 1.43;
+        margin-top: 24px;
+      }
+
+      .wrap-define {
+        display: flex;
+        flex-direction: column;
+
+        .define {
+          flex: 1;
+
+          dt {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #fff;
+          }
+
+          dd {
+            .text-desc {
+              font-size: 12px;
+              line-height: 1.33;
+            }
+          }
+        }
+      }
+
+      .section.section1 {
+        padding: 0;
+
+        .section__inner {
+          width: 100%;
+
+          &:after {
+            content: '';
+            position: relative;
+            display: block;
+            width: 100%;
+            height: 240px;
+            opacity: 0;
+            background: url('~@/assets/img/mobile/playbook/playbook-main.webp') 50% 0 / 870px 240px no-repeat;
+            transition: opacity 0.6s ease-in-out 0.2s, transform 0.6s ease-out;
+            transform: translateY(-20px);
+            z-index: 2;
+          }
+
+          .wrap-title {
+            max-width: var(--intro-draco-maxwidth);
+            min-height: 238px;
+            padding: 64px 24px 40px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 3;
+          }
+        }
+      }
+
+      .wrap-title {
+        color: #fff;
+        text-align: center;
+
+        .dsp-title {
+          font-size: 32px;
+          font-weight: 700;
+          line-height: normal;
+          letter-spacing: -1px;
+          word-break: break-all;
+
+          &.line-break {
+            font-size: 24px;
+            letter-spacing: -2px;
+          }
+        }
+
+        .text-introduce {
+          font-size: 16px;
+          font-weight: 700;
+          line-height: 1.5;
+          margin-top: 16px;
+        }
+      }
+
+      .dsp-basic {
+        padding: 24px 0 80px;
+      }
+
+      .dsp-round {
+        padding: 0 0 80px;
+
+        .wrap-define {
+          .define {
+            dd {
+              img {
+                display: block;
+                margin: 24px auto 0;
+              }
+
+              .text-desc {
+                margin-top: 24px;
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-algorithm {
+        padding: 0 0 80px;
+
+        .wrap-formula {
+          margin-top: 40px;
+
+          small {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+          }
+
+          .formula {
+            display: block;
+            margin: 32px auto 0;
+          }
+
+          .formula-infograph {
+            display: block;
+            margin: 40px auto 0;
+          }
+        }
+      }
+
+      .dsp-winning {
+        padding: 0 0 80px;
+
+        .wrap-formula {
+          margin-top: 64px;
+
+          small {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+          }
+
+          .formula {
+            display: block;
+          }
+
+          .wrap-graph {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 40px 0 0;
+
+            li {
+              flex: 1;
+
+              .text-desc {
+                min-height: 40px;
+                font-size: 12px;
+                line-height: 1.67;
+              }
+            }
+          }
+        }
+
+        .wrap-define {
+          .define {
+            margin-top: 24px;
+
+            dd {
+              .text-desc {
+                margin-top: 16px;
+                font-size: 12px;
+                line-height: 1.33;
+
+                small {
+                  display: block;
+                  font-size: 12px;
+                  font-weight: normal;
+                  margin-top: 16px;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-rewards {
+        padding: 0 0 24px;
+
+        .wrap-define {
+          flex-direction: column;
+
+          .define {
+            position: relative;
+          }
+        }
+
+        .wrap-formula {
+          small {
+            display: block;
+            font-size: 12px;
+            font-weight: normal;
+          }
+
+          .formula {
+            display: block;
+          }
+        }
+      }
+
+      .dsp-youtube {
+        margin: 80px 0;
+
+        .wrap-youtube {
+          position: relative;
+          margin-top: 0;
+          padding-top: 56.25%;
+          height: 0;
+
+          &.no-gutter {
+            padding-top: 0;
+            width: 960px;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+
+.init-playbook {
+  .v-application {
+    .contents.playbook {
+      &:after {
+        opacity: 1;
+        transform: translate(0);
+      }
+      .section.section1 {
+        .section__inner {
+          &:after {
+            opacity: 1;
+            transform: translate(0);
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-desktop {
+  .v-application {
+    .contents.playbook {
+      padding-top: var(--navdsp-height);
+
+      &:after {
+        top: 0;
+        height: 600px;
+        background: url('~@/assets/img/desktop/playbook/playbook-topbg.webp') 50% 0 / 1600px 600px no-repeat;
+      }
+
+      .section {
+        max-width: none;
+        margin-top: 0;
+
+        &__inner {
+          padding: 0 24px;
+          box-sizing: content-box;
+        }
+      }
+
+      .init-playbook & {
+        &:after {
+          opacity: 1;
+          transform: translate(0);
+        }
+
+        .section.section1 {
+          .section__inner {
+            &:after {
+              opacity: 1;
+              transform: translate(0);
+            }
+          }
+        }
+      }
+
+      .headword {
+        font-size: 40px;
+      }
+
+      .text-desc {
+        font-size: 18px;
+        line-height: 1.33;
+      }
+
+      .wrap-define {
+        flex-direction: row;
+
+        .define {
+          dt {
+            font-size: 20px;
+            line-height: 1;
+          }
+
+          dd {
+            .text-desc {
+              font-size: 16px;
+              line-height: 1.25;
+            }
+          }
+        }
+      }
+
+      .section.section1 {
+        .section__inner {
+          &:after {
+            height: 441px;
+            z-index: 1;
+            background: url('~@/assets/img/desktop/playbook/playbook-main.webp') 50% 0 / 1600px 441px no-repeat;
+          }
+
+          .wrap-title {
+            max-width: none;
+            width: var(--section-inner-width);
+            min-height: 300px;
+            padding: 62px 0 56px;
+            z-index: 2;
+          }
+        }
+      }
+
+      .wrap-title {
+        .dsp-title {
+          display: inline-block;
+          vertical-align: top;
+          font-size: 72px;
+
+          &.line-break {
+            font-size: 54px;
+            letter-spacing: -2px;
+          }
+        }
+
+        .text-introduce {
+          font-size: 32px;
+          line-height: 1.13;
+        }
+      }
+
+      .dsp-basic {
+        padding: 93px 0 120px;
+      }
+
+      .dsp-round {
+        padding: 0 0 120px;
+
+        .wrap-define {
+          margin-top: 40px;
+
+          .define {
+            max-width: 267px;
+
+            dd {
+              img {
+                margin-top: 40px;
+              }
+
+              .text-desc {
+                margin-top: 40px;
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-algorithm {
+        padding: 0 0 120px;
+
+        .text-desc {
+          max-width: 720px;
+        }
+
+        .wrap-formula {
+          margin-top: 64px;
+
+          .formula {
+            margin-top: 10px;
+          }
+
+          .formula-infograph {
+            display: inline-block;
+            margin-top: 64px;
+          }
+        }
+      }
+
+      .dsp-winning {
+        padding: 0 0 120px;
+
+        .text-desc {
+          max-width: 720px;
+        }
+
+        .wrap-formula {
+          .formula {
+            display: inline-block;
+            margin-top: 8px;
+          }
+
+          .wrap-graph {
+            margin: 80px 0 0;
+            justify-content: space-between;
+            flex-direction: row;
+
+            li {
+              max-width: 440px;
+            }
+          }
+        }
+
+        .wrap-define {
+          margin-top: 120px;
+
+          .define {
+            max-width: 267px;
+
+            dd {
+              .text-desc {
+                font-size: 16px;
+                line-height: 1.38;
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-rewards {
+        padding: 0 0 120px;
+
+        .text-desc {
+          max-width: 720px;
+          padding-bottom: 80px;
+        }
+
+        .wrap-define {
+          margin-top: 62px;
+
+          .define {
+            dt,
+            dd {
+              max-width: 440px;
+            }
+
+            .wrap-img {
+              position: absolute;
+              right: 0;
+              top: 0;
+            }
+
+            &.winnerdraw {
+              .wrap-img {
+                top: -72px;
+              }
+            }
+
+            &.rewards {
+              margin-top: 80px;
+            }
+          }
+        }
+
+        .wrap-formula {
+          margin-top: 64px;
+
+          .formula {
+            margin-top: 8px;
+          }
+        }
+      }
+
+      .dsp-youtube {
+        margin: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .is-desktop {
+    .v-application .contents.playbook {
+      .section.section1 {
+        .section__inner {
+          .wrap-title {
+            padding: 62px 24px 56px;
+          }
+          &:after {
+          }
+        }
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .v-application {
+    .contents.playbook {
+      &:after {
+        z-index: 1;
+      }
+
+      .section {
+        width: 100%;
+        margin: 0;
+        box-sizing: border-box;
+      }
+
+      .wrap-define {
+        justify-content: space-between;
+
+        .define {
+          margin-top: 40px;
+
+          dd {
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+      }
+
+      .wrap-formula {
+        img {
+          max-width: 100%;
+        }
+      }
+
+      .section.section1 {
+        max-width: inherit;
+
+        .section__inner {
+          .wrap-title {
+            box-sizing: border-box;
+          }
+        }
+      }
+
+      .wrap-title {
+        box-sizing: border-box;
+      }
+
+      .dsp-round {
+        .wrap-define {
+          .define {
+            dd {
+              .text-desc {
+                font-size: 12px;
+                line-height: 1.33;
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-algorithm {
+        .wrap-formula {
+          small {
+            line-height: 2;
+          }
+        }
+      }
+
+      .dsp-winning {
+        .wrap-formula {
+          small {
+            line-height: 2;
+          }
+
+          .formula {
+            margin: 40px auto 0;
+          }
+
+          .wrap-graph {
+            li {
+              .text-desc + img {
+                display: block;
+                margin: 16px auto 0;
+              }
+            }
+          }
+        }
+      }
+
+      .dsp-rewards {
+        .wrap-define {
+          .define {
+            margin-top: 64px;
+
+            .text-desc {
+              padding-bottom: 24px;
+              margin-top: 16px;
+            }
+
+            .wrap-img {
+              text-align: center;
+            }
+          }
+        }
+
+        .wrap-formula {
+          small {
+            line-height: 2;
+          }
+
+          .formula {
+            margin: 40px auto 0;
+          }
+
+          .reward-winner {
+            display: block;
+            margin: 64px auto 0;
+          }
+        }
+      }
+
+      .dsp-youtube {
+        position: relative;
+        left: calc(var(--section-inner-padding) * -1) !important;
+        width: calc(100% + var(--section-inner-padding) * 2) !important;
+
+        .wrap-youtube {
+          iframe {
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .is-mobile {
+    .v-application {
+      .contents.playbook {
+        .wrap-title {
+          min-height: 627px;
+        }
+      }
+    }
+  }
+}

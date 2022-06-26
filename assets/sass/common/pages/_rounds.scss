@@ -1,0 +1,14 @@
+.is-desktop {
+  .v-application {
+    .contents {
+      &.rounds {
+        .section {
+          &__inner {
+            position: relative;
+            box-sizing: content-box;
+          }
+        }
+      }
+    }
+  }
+}

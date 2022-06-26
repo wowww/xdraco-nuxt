@@ -1,0 +1,604 @@
+
+.item-ranking {
+  --ranking-margin-y: 16px;
+  --ranking-padding: 24px 20px;
+
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  margin-top: var(--ranking-margin-y);
+  padding: var(--ranking-padding);
+  width: 100%;
+
+  &__rank {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 8px;
+    z-index: 1;
+    padding-top: 13px;
+    width: 58px;
+    height: 64px;
+    line-height: 1.1;
+    color: #000;
+    font-size: 16px;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.32px;
+    background: url("~@/assets/img/common/item-ranking/bg-rank.webp") 0 0 /
+      cover no-repeat;
+    box-sizing: border-box;
+
+    .number {
+      font-size: 24px;
+      letter-spacing: -0.48px;
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    flex: 1;
+  }
+
+  .wrap-define-detail {
+    display: none;
+  }
+
+  .define-trade {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    dt {
+      display: block;
+      line-height: 1.3;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    dd {
+      color: #fff;
+      line-height: 1.19;
+      font-weight: 700;
+      font-size: 16px;
+      letter-spacing: -0.18px;
+    }
+
+    .character {
+      display: none;
+    }
+
+    &.serial-number {
+      dd {
+        font-weight: 400;
+        font-size: 14px;
+      }
+    }
+
+    &.price {
+      .price {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        column-gap: 4px;
+        line-height: 1;
+        color: #fff;
+        font-size: 18px;
+        letter-spacing: -0.18px;
+
+        .ico-sm {
+          padding-left: 20px;
+
+          &::before {
+            width: 20px;
+            height: 20px;
+          }
+        }
+      }
+
+      .us-dollar {
+        text-align: right;
+        font-size: 12px;
+        color: rgba(255, 255, 255, 0.5);
+        margin-top: 1px;
+      }
+    }
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &.nft-ranking {
+    padding: 24px 20px 30px;
+
+    .define-trade {
+      &.price {
+        .price {
+          &::before {
+            background: url("~@/assets/img/mobile/popup/ico-wemix-credit-logo.webp") 0 0 / cover no-repeat;
+          }
+        }
+      }
+
+      &.seller {
+        dd {
+          display: inline-flex;
+          flex-direction: row-reverse;
+          font-weight: normal;
+
+          &.character {
+            display: none;
+          }
+
+          .data-info {
+            display: inline-flex;
+            flex-direction: inherit;
+            align-items: center;
+            font-size: 14px;
+            color: rgba(#fff, 0.5);
+            font-weight: normal;
+
+            span {
+              margin: 0 4px;
+
+              &:first-child {
+                margin-left: 0;
+              }
+            }
+          }
+        }
+
+        & + .define-trade {
+          dd {
+            text-align: right;
+            font-size: 14px;
+            font-weight: normal;
+          }
+        }
+      }
+    }
+
+    .define-scorp {
+      padding: 18px 0 0 0;
+
+      li {
+        list-style-type: none;
+        text-align: center;
+
+        a {
+          position: relative;
+          font-size: 12px;
+          color: #fff;
+
+          &:before {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -3px;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background-color: #fff;
+          }
+        }
+      }
+    }
+
+    .item-ranking__rank {
+      left: 18px;
+      padding-top: 18px;
+      background: url("~@/assets/img/common/item-ranking/bg-rank_red.webp") 0 0 /
+        cover no-repeat;
+      font-size: 16px;
+      color: #fff;
+      font-weight: bold;
+
+      em {
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+.is-desktop {
+  .item-ranking {
+    --ranking-padding: 24px 0 24px 32px;
+    --ranking-height: 392px;
+
+    gap: 40px;
+    height: var(--ranking-height);
+
+    &__name {
+      .item-name {
+        line-height: 1.2;
+        color: #fff;
+        font-weight: 700;
+        font-size: 28px;
+        letter-spacing: -0.28px;
+      }
+      .item-category {
+        margin-top: 4px;
+        line-height: 1.1;
+        font-size: 14px;
+      }
+    }
+    .wrap-define-detail {
+      display: flex;
+      margin-top: 16px;
+    }
+    .define-detail {
+      position: relative;
+      padding: 9px 16px;
+      line-height: 1.1;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 1px;
+        height: 100%;
+        background-color: rgba(#fff, 0.15);
+      }
+      dt {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 12px;
+      }
+      dd {
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.36px;
+      }
+      .grade {
+        text-transform: uppercase;
+        &.grade-2 {
+          color: var(--color-uncommon);
+        }
+        &.grade-3 {
+          color: var(--color-rare);
+        }
+        &.grade-4 {
+          color: var(--color-epic);
+        }
+        &.grade-5 {
+          color: var(--color-legendary);
+        }
+      }
+      &:first-of-type {
+        padding-left: 0;
+
+        &::before {
+          content: none;
+        }
+      }
+    }
+    .wrap-define-trade {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 32px;
+    }
+    .define-trade {
+      width: 40%;
+
+      dt {
+        display: block;
+        margin-bottom: 4px;
+        line-height: 1.166;
+        font-size: 12px;
+      }
+      dd {
+        color: #fff;
+        line-height: 1.33;
+        font-weight: 700;
+        font-size: 18px;
+        letter-spacing: -0.18px;
+      }
+      .character {
+        float: left;
+        margin: -3px 8px 0 0;
+
+        img {
+          vertical-align: top;
+        }
+      }
+      &.serial-number {
+        display: none;
+      }
+      &.price {
+        margin-bottom: 16px;
+        border-bottom: 1px solid rgba(#fff, 0.2);
+        padding-bottom: 16px;
+        width: 100%;
+
+        .price {
+          display: flex;
+          align-items: center;
+          column-gap: 4px;
+          line-height: 1;
+          color: #fff;
+          font-size: 32px;
+          letter-spacing: -0.64px;
+          font-weight: 700;
+
+          .ico-sm {
+            padding-left: 40px;
+
+            &::before {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+
+        .us-dollar {
+          color: rgba(255, 255, 255, 0.5);
+          font-size: 12px;
+          margin-top: 2px;
+        }
+      }
+    }
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &.nft-ranking {
+      .define-detail:first-of-type {
+        padding-left: 0;
+      }
+      .wrap-define-detail {
+        margin-top: 29px;
+      }
+      .wrap-define-trade {
+        margin-top: 29px;
+      }
+      .define-trade.price {
+        padding-bottom: 24px;
+        margin-bottom: 12px;
+      }
+      .item-ranking__rank {
+        background: url("~@/assets/img/common/item-ranking/bg-rank_red.webp") 0 0 /
+          cover no-repeat;
+        color: #fff;
+      }
+      .define-detail {
+        display: flex;
+        flex-wrap: wrap;
+        flex: 0;
+        white-space: nowrap;
+        padding: 5px 24px;
+
+        &:nth-child(1),
+        &:nth-child(2) {
+          justify-content: center;
+          flex: 0;
+        }
+        dt {
+          margin-bottom: 0;
+          height: 14px;
+        }
+        dd {
+          display: flex;
+          align-items: center;
+          height: 40px;
+          font-size: 24px;
+        }
+      }
+
+      .define-trade {
+        &.price {
+          .price {
+            font-size: 28px;
+            &:before {
+              background: url("~@/assets/img/common/item-ranking/ico-wemix.webp")
+              0 0 / cover no-repeat;
+            }
+          }
+        }
+        &.seller {
+          dd {
+            font-size: 14px;
+          }
+        }
+        dd {
+          font-size: 12px;
+          .data-info {
+            display: inline-block;
+            vertical-align: middle;
+            font-size: 12px;
+            color: rgba($color: #fff, $alpha: 0.5);
+            span {
+              margin-left: 8px;
+            }
+          }
+        }
+        dt {
+          margin-bottom: 6px;
+          line-height: 0.766;
+        }
+      }
+    }
+  }
+}
+
+.is-mobile {
+  .item-ranking {
+    background-color: rgba(#fff, 0.05);
+    box-shadow: inset 0 1px 0 0 rgba(#fff, 0.1);
+
+    &__name {
+      display: none;
+    }
+
+    .card {
+      margin: 0 auto;
+    }
+
+    .wrap-define-detail {
+      display: none;
+    }
+
+    .define-trade {
+      margin-top: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      dt {
+        display: block;
+        line-height: 1.3;
+        font-size: 14px;
+        color: #fff;
+      }
+
+      dd {
+        color: #fff;
+        line-height: 1.19;
+        font-weight: 700;
+        font-size: 16px;
+        letter-spacing: -0.18px;
+      }
+
+      .character {
+        display: none;
+      }
+
+      &.serial-number {
+        dd {
+          font-weight: 400;
+          font-size: 14px;
+        }
+      }
+
+      &.price {
+        .price {
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
+          column-gap: 4px;
+          line-height: 1;
+          color: #fff;
+          font-size: 18px;
+          letter-spacing: -0.18px;
+
+          .ico-sm {
+            padding-left: 20px;
+
+            &::before {
+              width: 20px;
+              height: 20px;
+            }
+          }
+        }
+
+        .us-dollar {
+          text-align: right;
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.5);
+          margin-top: 1px;
+        }
+      }
+    }
+
+    &:first-of-type {
+      margin-top: 0;
+    }
+
+    &.nft-ranking {
+      padding: 24px 20px 30px;
+
+      .define-trade {
+        &.price {
+          .price {
+            &::before {
+              background: url("~@/assets/img/mobile/popup/ico-wemix-credit-logo.webp") 0 0 / cover no-repeat;
+            }
+          }
+        }
+
+        &.seller {
+          dd {
+            display: inline-flex;
+            flex-direction: row-reverse;
+            font-weight: normal;
+
+            &.character {
+              display: none;
+            }
+
+            .data-info {
+              display: inline-flex;
+              flex-direction: inherit;
+              align-items: center;
+              font-size: 14px;
+              color: rgba(#fff, 0.5);
+              font-weight: normal;
+
+              span {
+                margin: 0 4px;
+
+                &:first-child {
+                  margin-left: 0;
+                }
+              }
+            }
+          }
+
+          & + .define-trade {
+            dd {
+              text-align: right;
+              font-size: 14px;
+              font-weight: normal;
+            }
+          }
+        }
+      }
+
+      .define-scorp {
+        padding: 18px 0 0 0;
+
+        li {
+          list-style-type: none;
+          text-align: center;
+
+          a {
+            position: relative;
+            font-size: 12px;
+            color: #fff;
+
+            &:before {
+              content: "";
+              display: block;
+              position: absolute;
+              bottom: -3px;
+              left: 0;
+              width: 100%;
+              height: 1px;
+              background-color: #fff;
+            }
+          }
+        }
+      }
+
+      .item-ranking__rank {
+        left: 18px;
+        padding-top: 18px;
+        background: url("~@/assets/img/common/item-ranking/bg-rank_red.webp") 0 0 /
+        cover no-repeat;
+        font-size: 16px;
+        color: #fff;
+        font-weight: bold;
+
+        em {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}

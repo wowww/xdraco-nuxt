@@ -1,0 +1,190 @@
+.mirage-my-squadron {
+  margin: 32px 0;
+
+  .section-title-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 16px;
+    margin-bottom: 16px;
+
+    .section-title {
+      display: flex;
+      align-items: center;
+      column-gap: 16px;
+
+      .contents.mirage & {
+        margin-bottom: 0;
+      }
+    }
+    .squadron-msg {
+      font-size: 12px;
+      color: #ffffff99;
+      font-weight: 400;
+    }
+    .squadron-party-boost {
+      display: flex;
+      column-gap: 8px;
+      align-items: center;
+      font-size: 12px;
+      color: #fff;
+
+      .boost-value {
+        display: flex;
+        flex-shrink: 0;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        background: url("~@/assets/img/common/mirage/bg-hexagon-rate.webp") 0 0 / cover no-repeat;
+        line-height: 2;
+        font-weight: bold;
+        color: #000;
+      }
+    }
+  }
+
+  .list-system-noti {
+    margin: 16px 0 24px;
+
+    > li {
+      display: flex;
+      align-items: center;
+      background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 49%, rgba(255, 255, 255, 0) 100%);
+      text-align: center;
+
+      .noti-desc {
+        flex: 1;
+        padding: 18px 10px;
+        font-size: 14px;
+        line-height: 1.43;
+
+        > em {
+          color: #fff;
+        }
+      }
+
+      &:not(:first-child) {
+        margin-top: 2px;
+      }
+    }
+  }
+
+  .mirage-character {
+    z-index: 0;
+
+    &__class {
+      + .wrap-button {
+        margin-top: 60px !important;
+      }
+    }
+  }
+
+  .char-list {
+    flex-wrap: wrap;
+    padding-bottom: 24px !important;
+
+    .wrap-button {
+      max-width: 140px;
+      margin: 20px auto 0;
+
+      .btn-mirage {
+        --btn-height: 48px;
+
+        &.btn-bid {
+          font-size: 16px;
+        }
+        &.btn-enlisted {
+          flex-direction: column;
+          row-gap: 4px;
+
+          .volume {
+            column-gap: 4px;
+            line-height: 1.25;
+            color: #fff;
+            font-weight: 600;
+          }
+
+          &:disabled {
+            &::before {
+              display: none;
+            }
+          }
+        }
+        &.btn-disabled {
+          margin: 0 auto;
+          width: 132px;
+        }
+      }
+    }
+  }
+
+  .caution-update {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 16px 0 10px;
+    padding: 30px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.15) 49%, rgba(255, 255, 255, 0) 100%);
+    text-align: center;
+
+    .caution-txt {
+      margin-right: 4px;
+      font-size: 14px;
+      line-height: 1.43;
+    }
+
+    .icon-mirage-tooltip {
+      flex-shrink: 0;
+    }
+  }
+
+  // for Mobile
+  .is-mobile & {
+    margin: 24px 0;
+
+    .section-title-bar {
+      margin-bottom: 0;
+      padding: 0 16px;
+
+      .squadron-msg {
+        .icon-mirage-tooltip {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .mirage-character {
+      &__class {
+        + .wrap-button {
+          margin-top: 40px !important;
+        }
+      }
+    }
+    .char-list {
+      padding-bottom: 20px !important;
+      .wrap-button {
+        margin-top: 0;
+      }
+    }
+    .list-system-noti {
+      margin-top: 0;
+
+      > li {
+        column-gap: 10px;
+        padding: 16px 24px;
+        text-align: left;
+
+        .noti-desc {
+          padding: 0;
+        }
+      }
+    }
+    .caution-update {
+      margin: 0 0 20px;
+      padding: 20px 24px;
+      column-gap: 8px;
+      text-align: left;
+    }
+  }
+}

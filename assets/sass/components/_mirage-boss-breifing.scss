@@ -1,0 +1,603 @@
+.mirage-boss-breifing {
+  margin: 32px 0;
+  line-height: normal;
+  color: #fff;
+
+  .mirax-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    column-gap: 4px;
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    padding: 0 6px;
+    height: 22px;
+    background-color: #fff;
+    font-size: 12px;
+    color: #000;
+    font-weight: 400;
+    letter-spacing: normal;
+
+    > em {
+      color: #f00;
+      font-weight: 600;
+    }
+  }
+
+  .breifing-header {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #650087 0%, #220155 100%);
+  }
+  .section-recruit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 16px;
+    background-image: linear-gradient(82deg, #306 0%, #7928cb 47%, #306 100%);
+
+    .symbol-mirage {
+      position: relative;
+      padding-left: 32px;
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 24px;
+        height: 24px;
+        background: url('~@/assets/img/common/mirage/logo-24-mirage.webp') 50% 50% / contain no-repeat;
+      }
+    }
+  }
+  .round-count-down {
+    display: flex;
+    column-gap: 1px;
+    background-color: #000;
+
+    .boss-round {
+      display: flex;
+      align-items: center;
+      padding: 0 12px;
+      background-image: linear-gradient(to bottom, #406 0%, #130125 100%);
+      font-size: 14px;
+      font-weight: 700;
+    }
+  }
+  .info-entry {
+    display: flex;
+    font-size: 14px;
+    flex: 1;
+
+    .desc {
+      flex: 1;
+      padding: 10px 12px;
+      text-align: right;
+
+      > span {
+        vertical-align: middle;
+      }
+    }
+
+    .icon-locked {
+      display: inline-block;
+      width: 20px;
+      height: 20px;
+      background: url('~@/assets/img/common/mirage/ico-locked.webp') 0 0 / cover no-repeat;
+    }
+  }
+  .button-wrap {
+    display: none;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+  .btn-time-table {
+    width: 40px;
+    height: 100%;
+    background: url('~@/assets/img/common/mirage/icon-timetable.webp') 50% 50% / 24px 24px no-repeat;
+    font-size: 0;
+  }
+
+  .battle-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 56px;
+
+    > span {
+      position: relative;
+      padding-left: 41px;
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  .breifing-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    height: 440px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .boss-header {
+    position: relative;
+    z-index: 2;
+    padding: 40px 40px 0;
+    font-size: 32px;
+    font-weight: 900;
+    line-height: 1.08;
+    letter-spacing: -0.06em;
+
+    > em {
+      display: block;
+      color: #f00;
+    }
+  }
+  .boss-footer {
+    z-index: 2;
+    padding: 32px 40px 32px 176px;
+    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, #000 100%), linear-gradient(to bottom, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2));
+    font-size: 14px;
+    line-height: 1.43;
+  }
+
+  &[data-boss-name='eunsil'], &[data-boss-type='11'] {
+    .breifing-content {
+      background-image: url('~@/assets/img/desktop/mirage/bg-boss-raid-eunsil-full.webp');
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 731px;
+        background: url('~@/assets/img/desktop/mirage/img-boss-eunsil.webp') 50% 50% / auto 100% no-repeat;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 160px;
+        height: 160px;
+        background: url('~@/assets/img/desktop/mirage/img-boss-eunsil-thumb.webp') 50% 50% / auto 100% no-repeat;
+      }
+    }
+  }
+  &[data-boss-name='horang'], &[data-boss-type='12'] {
+    .breifing-content {
+      background-image: url('~@/assets/img/desktop/mirage/bg-boss-raid-horang-full.webp');
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 9px;
+        right: 0;
+        bottom: 0;
+        z-index: 1;
+        width: 756px;
+        background: url('~@/assets/img/desktop/mirage/img-boss-horang.webp') 50% 50% / auto 100% no-repeat;
+      }
+      &::after {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+        width: 160px;
+        height: 160px;
+        background: url('~@/assets/img/desktop/mirage/img-boss-horang-thumb.webp') 50% 50% / auto 100% no-repeat;
+      }
+    }
+  }
+
+  .reward-panel {
+    .v-expansion-panel {
+      .v-expansion-panel-header {
+        padding: 16px;
+        min-height: auto !important;
+        color: #fff;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.33;
+      }
+    }
+    .v-expansion-panel-header__icon {
+      .v-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 0;
+
+        &::before,
+        &::after {
+          content: '';
+          position: absolute;
+          top: 5px;
+          left: 6px;
+          width: 1px;
+          height: 11px;
+          background-color: #fff;
+          opacity: 1;
+          transform: rotate(-45deg);
+        }
+        &::after {
+          left: auto;
+          right: 6px;
+          border-radius: 0;
+          transform: rotate(45deg);
+        }
+      }
+    }
+    .v-expansion-panel-content {
+      &__wrap {
+        padding: 20px 40px 40px;
+        color: #ffffff99;
+        font-size: 14px;
+      }
+    }
+    .list-reward-desc {
+      > li {
+        > em {
+          color: #fff;
+        }
+        &:not(:first-child) {
+          margin-top: 8px;
+        }
+      }
+      &.bullet {
+        > li {
+          position: relative;
+          padding-left: 20px;
+
+          &::before {
+            content: '';
+            position: absolute;
+            top: 4px;
+            left: 8px;
+            margin-top: 4px;
+            border-width: 3px 3px 0 0;
+            border-style: solid;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      + .list-reward {
+        margin-top: 26px;
+        padding-top: 40px;
+        border-top: 1px solid #ffffff33;
+      }
+    }
+    .list-reward {
+      display: flex;
+      flex-wrap: wrap;
+      row-gap: 10px;
+
+      > li {
+        display: flex;
+        column-gap: 16px;
+        width: calc(100% / 3);
+        padding-right: 20px;
+      }
+    }
+  }
+
+  .item-info {
+    --card-width: 96px;
+    --card-height: 96px;
+
+    align-items: flex-start;
+
+    .item__layer {
+      .wrap-item {
+        img {
+          width: 64px;
+        }
+      }
+      .by-what {
+        top: 8px;
+        left: 8px;
+      }
+    }
+    .item-desc {
+      display: flex;
+      flex-direction: column;
+      row-gap: 4px;
+
+      .item-category {
+        font-size: 12px;
+      }
+      .item-name {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+
+  &.is-locked, &.is-defeat {
+    .button-wrap {
+      display: flex;
+    }
+    .breifing-header {
+      background-image: linear-gradient(to bottom, #444 0%, #222 100%);
+    }
+    .round-count-down {
+      .boss-round {
+        background-image: linear-gradient(to bottom, #333 0%, #111 100%);
+      }
+    }
+  }
+
+  &.in-battle {
+    .battle-status {
+      background-image: linear-gradient(86deg, #900, #f00 47%, #900 100%);
+
+      > span {
+        color: #fff;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: -5px;
+          left: 0;
+          width: 33px;
+          height: 32px;
+          background: url('~@/assets/img/common/mirage/ico-assault02.webp') 0 0 / 100% no-repeat;
+        }
+      }
+    }
+  }
+
+  &.is-defeat {
+    .battle-status {
+      background-image: linear-gradient(to right, #f90 0%, #fff386 50%, #f90 100%);
+
+      > span {
+        &::before {
+          content: '';
+          position: absolute;
+          top: -4px;
+          left: 0;
+          width: 33px;
+          height: 30px;
+          background: url('~@/assets/img/common/mirage/ico-assault.webp') 0 0 / 100% no-repeat;
+        }
+      }
+    }
+    &[data-boss-name='eunsil'], &[data-boss-type='11'] {
+      .breifing-content {
+        background-image: url('~@/assets/img/desktop/mirage/bg-boss-raid-eunsil-full-defeat.webp');
+
+        &::before {
+          background-image: url('~@/assets/img/desktop/mirage/img-boss-eunsil-defeat.webp');
+        }
+        &::after {
+          background-image: url('~@/assets/img/desktop/mirage/img-boss-eunsil-thumb-defeat.webp');
+        }
+      }
+    }
+    &[data-boss-name='horang'], &[data-boss-type='12'] {
+      .breifing-content {
+        &::before {
+          background-image: url('~@/assets/img/desktop/mirage/img-boss-horang-defeat.webp');
+        }
+        &::after {
+          background-image: url('~@/assets/img/desktop/mirage/img-boss-horang-thumb-defeat.webp');
+        }
+      }
+    }
+  }
+
+  .is-mobile & {
+    margin: 24px 0;
+
+    .mirax-info {
+      position: static;
+        column-gap: 4px;
+      }
+
+    .breifing-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      column-gap: 10px;
+      padding: 16px;
+
+      .boss-info {
+        flex: 1;
+        font-weight: 600;
+      }
+    }
+
+    .breifing-header {
+      flex-wrap: wrap;
+      align-items: flex-start;
+    }
+    .round-count-down {
+      width: 100%;
+
+      .boss-round {
+        flex: 1;
+        padding-left: 16px;
+      }
+    }
+
+    .tick-mirage {
+      --tick-width: 24px;
+      --tick-height: 40px;
+      --tick-flip-lineheight: 40px;
+      --tick-fontsize: 22px;
+
+      .tick-group {
+        &:nth-last-of-type(1) {
+          .tick-label {
+            margin-right: 0;
+          }
+        }
+      }
+    }
+
+    .info-entry {
+      background-color: #220055;
+
+      .desc {
+        display: flex;
+        align-items: center;
+        column-gap: 8px;
+        min-height: 40px;
+        padding: 8px 16px;
+        text-align: left;
+
+        .desc-txt {
+          max-width: calc(100% - 24px);
+          color: #ffffff99;
+          line-height: 1.43;
+        }
+
+        .icon-mirage-tooltip {
+          margin-left: 0;
+        }
+      }
+    }
+
+    .button-wrap {
+      display: flex;
+    }
+    .breifing-content {
+      height: 480px;
+    }
+    &[data-boss-name='eunsil'], &[data-boss-type='11'] {
+      .breifing-content {
+        background-image: url('~@/assets/img/mobile/mirage/bg-boss-raid-eunsil-full.webp');
+
+        &::before {
+          top: 60px;
+          left: 0;
+          right: 0;
+          width: auto;
+          background-image: url('~@/assets/img/mobile/mirage/img-boss-eunsil.webp');
+        }
+        &::after {
+          width: 120px;
+        }
+      }
+    }
+    &[data-boss-name='horang'], &[data-boss-type='12'] {
+      .breifing-content {
+        background-image: url('~@/assets/img/mobile/mirage/bg-boss-raid-horang-full.webp');
+
+        &::before {
+          top: 100px;
+          left: 0;
+          right: 0;
+          width: auto;
+          background-image: url('~@/assets/img/mobile/mirage/img-boss-horang.webp');
+        }
+        &::after {
+          content: '';
+          width: 120px;
+          background-position-x: -39px;
+        }
+      }
+    }
+    .boss-header {
+      padding: 24px 24px 0;
+      line-height: 1;
+      font-weight: 600;
+    }
+    .boss-footer {
+      padding: 27px 12px 27px 120px;
+    }
+    .reward-panel {
+      .v-expansion-panel-content {
+        &__wrap {
+          padding: 0;
+        }
+      }
+      .list-reward-desc {
+        padding: 16px;
+
+        > li {
+          line-height: 1.43;
+        }
+      }
+      .wrap-reward-swiper {
+        position: relative;
+        padding: 16px 0;
+
+        &::before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 16px;
+          right: 16px;
+          height: 1px;
+          background-color: #c4c4c433;
+        }
+
+        .swiper-container {
+          padding: 16px 16px 16px 32px;
+
+          .swiper-slide {
+            width: 140px;
+
+            margin-right: 16px;
+          }
+        }
+      }
+    }
+
+    .item-info {
+      flex-direction: column;
+      row-gap: 16px;
+
+      .item-desc {
+        margin-left: 0;
+      }
+    }
+
+    &.is-locked {
+      .info-entry {
+        background-color: #222;
+
+        .desc {
+          .desc-txt {
+            max-width: calc(100% - 52px);
+            color: #fff;
+          }
+        }
+      }
+    }
+
+    &.is-defeat {
+      &[data-boss-name='eunsil'], &[data-boss-type='11'] {
+        .breifing-content {
+          &::before {
+            background-image: url('~@/assets/img/mobile/mirage/img-boss-eunsil-defeat.webp');
+          }
+        }
+      }
+      &[data-boss-name='horang'], &[data-boss-type='12'] {
+        .breifing-content {
+          &::before {
+            background-image: url('~@/assets/img/mobile/mirage/img-boss-horang-defeat.webp');
+          }
+        }
+      }
+    }
+  }
+}

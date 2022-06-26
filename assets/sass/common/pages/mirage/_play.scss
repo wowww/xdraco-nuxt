@@ -1,0 +1,31 @@
+.mirage {
+  .mirage-play {
+    padding-bottom: 80px;
+    background: #04081c url("~@/assets/img/mobile/mirage/bg-mirage-play.jpg") 50% 0 / 640px auto no-repeat;
+    background-attachment: fixed;
+
+    & + .footer {
+      margin-top: 0 !important;
+    }
+
+    .grid-side {
+      display: none;
+    }
+  }
+}
+
+.is-mobile {
+  .mirage {
+    .mirage-play {
+      margin-right: 0;
+      margin-left: 0;
+      max-width: none;
+      width: 100%;
+      background: #04081c url("~@/assets/img/mobile/mirage/bg-mirage-play.jpg") 50% 0 / 640px auto no-repeat;
+
+      .grid-side {
+        display: none;
+      }
+    }
+  }
+}

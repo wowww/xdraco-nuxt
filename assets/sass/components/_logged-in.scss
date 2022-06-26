@@ -1,0 +1,194 @@
+.logged-in {
+  position: relative;
+  min-height: 200px;
+
+  .logged-in__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+
+    .title {
+      line-height: 2;
+      font-size: 16px !important;
+      font-weight: 700;
+      color: #fff;
+    }
+    .btn-logout {
+      height: inherit;
+      background-color: rgba(#fff, .1);
+    }
+    .btn-plain {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 0 12px;
+      min-width: 30px;
+      height: 40px;
+      color: #fff;
+      font-size: 16px;
+      background-color: rgba(#fff, .1);
+      vertical-align: top;
+    }
+  }
+  .wrap-balance {
+    display: flex;
+    gap: 0 2px;
+    margin: 24px 0 8px;
+  }
+  .balance {
+    flex: 1;
+    padding: 32px;
+    min-width: 200px;
+    height: 144px;
+    background-color: rgba(#191957, .5);
+
+    .balance-title {
+      line-height: normal;
+      font-size: 12px;
+      color: rgba(#fff, .75);
+    }
+    .logo {
+      height: 28px;
+    }
+    .balance-volume {
+      display: flex;
+      align-items: center;
+      gap: 0 8px;
+      height: 48px;
+      line-height: 1;
+      font-size: 24px;
+      font-weight: 700;
+      color: #fff;
+    }
+    .exchange-volume {
+      display: flex;
+      gap: 0 16px;
+      line-height: 1.333;
+      font-size: 12px;
+      color: rgba(#fff, .5);
+    }
+  }
+  .wrap-copy-code {
+    display: flex;
+    position: absolute;
+    top: 0;
+    right: 90px;
+    height: 40px;
+  }
+  .btn-copy-code {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    max-width: 500px;
+    line-height: 1.5;
+    font-size: 12px;
+    color: rgba(#fff, .5);
+
+    &::after {
+      content: '';
+      display: block;
+      width: 40px;
+      height: 40px;
+      background: url('~@/assets/img/desktop/price/btn-copy.webp') 0 0 / cover no-repeat;
+    }
+    .value {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      max-width: calc(100% - 40px);
+    }
+  }
+  .wrap-traded-button {
+    text-align: center;
+
+    .btn-trade {
+      display: inline-flex;
+      align-items: center;
+      gap: 0 8px;
+      padding: 16px 20px;
+      font-size: 14px;
+      color: #fff;
+      vertical-align: top;
+
+      span {
+        line-height: 24px;
+        border-bottom: 1px solid #fff;
+      }
+      &::after {
+        display: block;
+        content: '';
+        width: 19px;
+        height: 19px;
+        background-color: #fff;
+        mask: url('~@/assets/img/common/logged-in/icon-plus.svg') 50% 50%/contain no-repeat;
+      }
+    }
+  }
+
+  .is-mobile & {
+    padding: 40px 0;
+    width: 100%;
+    max-width: var(--section-inner-width);
+
+    .logged-in__header {
+      height: 30px;
+
+      .title {
+        font-size: 20px !important;
+      }
+      .btn-logout {
+        padding: 0 10px;
+      }
+      .btn-plain {
+        padding: 0 6px;
+        height: 30px;
+        font-size: 14px;
+      }
+    }
+    .wrap-balance {
+      flex-direction: column;
+      row-gap: 2px;
+      margin: 16px 0 0;
+
+      .balance {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 16px;
+
+        .logo {
+          height: 20px;
+        }
+        .balance-volume {
+          height: 24px;
+          font-size: 20px;
+        }
+        .balance-desc {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-end;
+        }
+      }
+    }
+    .wrap-copy-code {
+      position: relative;
+      top: auto;
+      right: auto;
+
+      .btn-copy-code {
+        justify-content: space-between;
+        padding-left: 16px;
+        width: 100%;
+      }
+    }
+    .wrap-traded-button {
+      .btn-trade {
+        font-size: 12px;
+
+        span {
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,130 @@
+.footer {
+  --footer-height: 120px;
+  --footer-bgcolor: #0b0b2c;
+
+  margin: 0 !important;
+  width: 100%;
+  text-align: center;
+  background-color: rgba(#000, 0.2);
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    height: var(--footer-height);
+    line-height: 18px;
+    color: #fff;
+  }
+
+  &__list-external {
+    display: flex;
+    visibility: visible;
+    padding-left: 0;
+
+    li {
+      list-style: none;
+      margin-left: clamp(10px, 1.5vw, 30px);
+      min-width: 56px;
+
+      &:first-of-type {
+        margin-left: 0;
+      }
+
+      a {
+        display: flex;
+        align-items: center;
+        min-width: 56px;
+        padding: 0 10px;
+        height: 100%;
+
+        &[target='_blank'] {
+          &::after {
+            content: '';
+            display: block;
+            margin-left: 6px;
+            width: 9px;
+            height: 9px;
+            background: url('~@/assets/img/common/footer/icon-arrow.png') 0 0 / cover no-repeat;
+          }
+        }
+
+        img {
+          min-width: 56px;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+
+    &::before {
+      content: '';
+      display: block;
+      margin-right: 8px;
+      width: 51px;
+      height: 10px;
+      background: url('~@/assets/img/common/footer/bi-wemade.webp') 50% 0 / auto 100% no-repeat;
+    }
+  }
+
+  .powered-by {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    font-size: 12px;
+
+    .brand-identity {
+      display: flex;
+      align-items: center;
+      column-gap: 2px;
+
+      &::before {
+        content: '';
+        display: block;
+        width: 15px;
+        height: 15px;
+        mask: url('~@/assets/img/common/hsp-my-stake/currency-wemix.svg') 50% 50% / auto 100% no-repeat;
+        background-color: rgba(#fff, .7);
+      }
+    }
+  }
+
+  .wrap-links {
+    display: flex;
+    column-gap: 32px;
+
+    .link {
+      display: flex;
+      align-items: center;
+      height: 32px;
+      color: inherit;
+      font-size: 12px;
+    }
+  }
+
+  .bottom {
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    height: 32px;
+    color: rgba(#fff, .3);
+  }
+
+  .is-mobile & {
+    .footer__inner {
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .bottom {
+      flex-direction: column;
+      height: auto;
+      line-height: 20px;
+    }
+  }
+}
